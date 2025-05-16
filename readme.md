@@ -14,3 +14,6 @@ Linux and Windows compatibility.
 - src  
     - data (Data structure implementation)  
     - modules (Vending machine modules)  
+
+# How to compile
+- Use provided vscode task.

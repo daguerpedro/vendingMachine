@@ -14,3 +14,6 @@ Compatibilidade Linux e Windows.
 - src  
     - data (Implementação estrutura de dados)  
     - modules (Modulos da máquina de venda)  
+
+# Como compilar
+- Use a task do vscode fornecida.
