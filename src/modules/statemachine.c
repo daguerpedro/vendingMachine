@@ -14,7 +14,7 @@ void setState(STATES newState)
 
 void listProducts()
 {
-    printf("\033[2J\033[H"); // Limpar tela
+    system("cls || clear");
 
     printf("> "); // Propaganda superior
     showPropaganda(getPropagandaList());
