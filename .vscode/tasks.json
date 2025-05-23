@@ -13,10 +13,12 @@
                 "-g",
                 "${workspaceFolder}/src/*.c",
                 "${workspaceFolder}/src/modules/*.c",
+                "${workspaceFolder}/src/modules/states/*.c",
                 "${workspaceFolder}/src/data/*.c",
 
                 "-I${workspaceFolder}/src/",
                 "-I${workspaceFolder}/src/modules/",
+                "-I${workspaceFolder}/src/modules/states/",
                 "-I${workspaceFolder}/src/data/",
 
                 "-DDEBUG",

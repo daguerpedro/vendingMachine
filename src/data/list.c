@@ -46,12 +46,13 @@ void freeList(List *list)
     while (node != NULL)
     {
         list->first = list->first->next;
-        //FIXME:
-        //if (node->data != NULL)
-            //free(node->data);
+        if (node->data != NULL)
+            free(node->data);
         free(node);
         node = list->first;
     }
+
+    //FIXME: free(): invalid pointer
     free(list);
 }
 
@@ -79,17 +80,22 @@ void popList(List *list)
     ListNode *lastNode = list->last;
     if (lastNode == NULL)
         return;
+
     list->last = lastNode->previous;
-    list->last->next = NULL;
+
+    if (list->last != NULL)
+        list->last->next = NULL;
+    else
+        list->first = NULL; // lista agora está vazia
+
     if (lastNode->data != NULL)
         free(lastNode->data);
     free(lastNode);
 }
-
 ListNode *listGetAt(List *list, int pos)
 {
     ListNode *node = NULL;
-    if (isListEmpty(list) || pos > listCount(list))
+    if (isListEmpty(list) || pos >= listCount(list) || pos < 0)
     {
 #ifdef DEBUG
         printf("[DEBUG] listGetAt at invalid position: %i | list size: %i.\n", pos, listCount(list));

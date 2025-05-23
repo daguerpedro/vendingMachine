@@ -1,7 +1,8 @@
-#include "products.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
+#include "products.h"
 
 List* _products;
 
@@ -10,19 +11,10 @@ List* _products;
 void loadProducts(List* productList)
 {
     PRODUCT* product = malloc(sizeof(PRODUCT));
-    strcpy_s(product->name, sizeof(product->name), "Produto 1");
+    strcpy(product->name, "Produto 1");
     product->price = 7.50f;
     product->stock = 5;
 
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
-    pushList(productList, (void*)product);
     pushList(productList, (void*)product);
     
     _products = productList;
