@@ -9,20 +9,22 @@
             "command": "gcc",
             "args": [
                 "-fdiagnostics-color=always",
-
                 "-g",
                 "${workspaceFolder}/src/*.c",
-                "${workspaceFolder}/src/modules/*.c",
-                "${workspaceFolder}/src/modules/states/*.c",
-                "${workspaceFolder}/src/data/*.c",
-
+                "${workspaceFolder}/src/stacks/*.c",
+                "${workspaceFolder}/src/estados/*.c",
+                "${workspaceFolder}/src/estados/config/*.c",
+                "${workspaceFolder}/src/estados/listar/*.c",
+                "${workspaceFolder}/src/estados/pagar/*.c",
+                "${workspaceFolder}/src/estados/selecionar/*.c",
                 "-I${workspaceFolder}/src/",
-                "-I${workspaceFolder}/src/modules/",
-                "-I${workspaceFolder}/src/modules/states/",
-                "-I${workspaceFolder}/src/data/",
-
+                "-I${workspaceFolder}/src/stacks/",
+                "-I${workspaceFolder}/src/estados/",
+                "-I${workspaceFolder}/src/estados/config/",
+                "-I${workspaceFolder}/src/estados/listar/",
+                "-I${workspaceFolder}/src/estados/pagar/",
+                "-I${workspaceFolder}/src/estados/selecionar/",
                 "-DDEBUG",
-                
                 "-o",
                 "${workspaceFolder}/rel/app.exe"
             ],

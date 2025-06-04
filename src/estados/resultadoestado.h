@@ -1,0 +1,10 @@
+#ifndef _RESULTADO_ESTADO
+#define _RESULTADO_ESTADO
+
+typedef enum RESULTADO_ESTADO
+{
+    VOLTAR = -1,
+    ADM = 0,
+    PROXIMO = 1,
+} RESULTADO_ESTADO;
+#endif // !_RESULTADO_ESTADO
