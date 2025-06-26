@@ -7,71 +7,80 @@
 #include <estados/selecionar/selecionar.h>
 
 #include <stdio.h>
+#include <stdlib.h>
 
+/// @brief Variável que controla se a máquina de estados deve rodar.
 bool rodar;
 
-void voltarEstado(STACK_ESTADOS* stack, ESTADO* estadoAtual)
+/// @brief Utiliza a stack de histórico de estados para voltar um estado.
+/// @param stack Stack que contêm o histórico de estados.
+/// @param estadoAtual
+void voltarEstado(STACK *stack, ESTADO *estadoAtual)
 {
-    if(stackEstadoVazia(stack)) return;
-    *estadoAtual = popEstado(stack);
+    if (stackVazia(stack))
+        return;
+    *estadoAtual = *(ESTADO *)popEstado(stack);
 }
 
-void processarEstado(STACK_ESTADOS* stack, ESTADO* estadoAtual)
+/// @brief Processa o resultado de um estado em específico.
+/// @param stack Stack que contêm o histórico de estados.
+/// @param resultado Resultado do estado.
+/// @param proximo Próximo estado.
+void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estadoAtual, ESTADO proximo)
+{
+    if (resultado == VOLTAR)
+    {
+        voltarEstado(stack, estadoAtual);
+        return;
+    }
+
+    if (resultado == PROXIMO)
+    {
+        ESTADO* copia = malloc(sizeof(ESTADO));
+        *copia = *estadoAtual;
+        pushStack(stack, (void *)copia);
+
+        *estadoAtual = proximo;
+        return;
+    }
+
+    if (resultado == SAIR)
+    {
+        rodar = false;
+        return;
+    }
+
+    if (resultado == MENU_ADM)
+    {
+        ESTADO* copia = malloc(sizeof(ESTADO));
+        *copia = *estadoAtual;
+        pushStack(stack, (void *)copia);
+        *estadoAtual = CONFIGURAR;
+        return;
+    }
+}
+
+/// @brief Processa um estado individual, analisa o resultado do estado indo para o próximo ou anterior.
+/// @param stack Stack que armazena o histórico de estados
+/// @param estadoAtual Estado atual a ser processado
+void processarEstado(STACK *stack, ESTADO *estadoAtual)
 {
     switch (*estadoAtual)
     {
     case LISTAR:
-        RESULTADO_ESTADO result = estadoListar();
-
-        if(result == VOLTAR)
-            voltarEstado(stack, estadoAtual);
-        if(result == PROXIMO)
-        {
-            pushEstado(stack, *estadoAtual);
-            *estadoAtual = SELECIONAR;
-        }
-        if(result == ADM)
-        {
-            pushEstado(stack, *estadoAtual);
-            *estadoAtual = CONFIGURAR;
-        }
-        
+        processarResultado(stack, estadoListar(), estadoAtual, SELECIONAR);
         break;
 
     case SELECIONAR:
-        result = estadoSelecionar();
-
-        if(result == VOLTAR)
-            voltarEstado(stack, estadoAtual);
-        if(result == PROXIMO)
-        {
-            pushEstado(stack, *estadoAtual);
-            *estadoAtual = PAGAR;
-        }
+        processarResultado(stack, estadoSelecionar(), estadoAtual, PAGAR);
         break;
 
     case PAGAR:
-        result = estadoPagar();
-
-        if(result == VOLTAR)
-            voltarEstado(stack, estadoAtual);
-        if(result == PROXIMO)
-        {
-            pushEstado(stack, *estadoAtual);
-            *estadoAtual = LISTAR;
-        }
+        processarResultado(stack, estadoPagar(), estadoAtual, LISTAR);
         break;
 
     case CONFIGURAR:
-        result = estadoConfig();
-
-        if(result == VOLTAR)
-            voltarEstado(stack, estadoAtual);
-        if(result == PROXIMO)
-        {
-            pushEstado(stack, *estadoAtual);
-            *estadoAtual = LISTAR;
-        }
+        processarResultado(stack, estadoConfig(), estadoAtual, LISTAR);
         break;
 
     default:
@@ -79,22 +88,28 @@ void processarEstado(STACK_ESTADOS* stack, ESTADO* estadoAtual)
     }
 }
 
-void processarEstados(STACK_ESTADOS* stack, ESTADO* estadoAtual)
+/// @brief Processa os estados enquanto a variável rodar for verdadeira
+/// @param stack Stack que conterá o histórico de estados
+/// @param estadoAtual Estado a ser processado
+void processarEstados(STACK *stack, ESTADO *estadoAtual)
 {
     while (rodar)
     {
         processarEstado(stack, estadoAtual);
     }
-    
+
+    printf("[DEV] maquinaestados.c | void processarEstados() | LEMBRAR DE LIMPAR TODAS AS FUTURAS ESTRUTURAS DE DADOS AQUI!.\n");
+    limparStack(stack);
 }
 
+/// @brief Inicia a máquina de estados
 void iniciarMaquinaEstados()
 {
     rodar = true;
-    STACK_ESTADOS stack;
+    STACK stack;
     ESTADO estadoAtual = LISTAR;
 
-    iniciarStackEstados(&stack);
+    iniciarStack(&stack);
     processarEstados(&stack, &estadoAtual);
-    limparStackEstados(&stack);   
+    limparStack(&stack);
 }
