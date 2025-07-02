@@ -1,11 +1,5 @@
 #include <stdbool.h>
-
-/// @brief Nó genérico para stack
-typedef struct NO
-{
-    struct NO *anterior;
-    void* valor;
-} NO;
+#include <no.h>
 
 typedef struct STACK
 {

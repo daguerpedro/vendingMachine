@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "estados.h"
+#include <no.h>
+
+#include "stack.h"
 
 /// @brief Inicia uma stack
 /// @param stack Referência para stack

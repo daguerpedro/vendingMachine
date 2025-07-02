@@ -1,8 +1,17 @@
 #include "listar.h"
 #include <stdio.h>
+
+#include <gerenciadores/propaganda/propaganda.h>
+
 RESULTADO_ESTADO estadoListar()
 {
-    printf("Você está no estado de listar\n1. VOLTAR\n2. PROXIMO\n3. MENU CONFIG\n4. SAIR\n");
+    printf("Você está no estado de listar.\n");
+    
+    char* propaganda = pegarPropaganda();
+    printf("[PROPAGANDA] %s\n", propaganda);
+    //devolverPropaganda(propaganda);
+
+    printf("\n1. VOLTAR\n2. PROXIMO\n3. MENU CONFIG\n4. SAIR\n");
 
     int r;
     int k = 0;
