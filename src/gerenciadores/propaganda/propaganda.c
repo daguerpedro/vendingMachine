@@ -1,6 +1,10 @@
 #include "propaganda.h"
 #include <structs/queue.h>
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 QUEUE qPropagandas;
 
 /// @brief Inicia o gerenciador de propagandas, assim como a fila de propagandas.
@@ -19,26 +23,61 @@ void limparGerenciadorPropaganda()
 /// @brief Carrega o arquivo de propagandas.
 void carregarPropagandas()
 {
-    char* propaganda1 = "Propaganda 1!";
-    char* propaganda2 = "Essa é a segunda propaganda.";
-    char* propaganda3 = "Terceira e ultima ad?";
-    
-    enQueue(&qPropagandas, (void*)propaganda1);
-    enQueue(&qPropagandas, (void*)propaganda2);
-    enQueue(&qPropagandas, (void*)propaganda3);    
+    FILE *file = fopen("propagandas.bin", "rb");
+    if (file == NULL)
+    {
+        file = criarArquivoPropagandasPadrao();
+        if (file == NULL)
+        {
+            printf("[ERRO FATAL] NÃO FOI POSSIVEL ABRIR NEM CRIAR O ARQUIVO DE PROPAGANDAS!\n");
+            exit(EXIT_FAILURE);
+        }
+    }
+
+    char buffer[1024];
+    while (fgets(buffer, sizeof(buffer), file) != NULL)
+    {
+        size_t len = strlen(buffer);
+        if (buffer[len - 1] == '\n')
+            buffer[len - 1] = '\0';
+
+        char *propaganda = malloc(strlen(buffer) + 1);
+        if (propaganda != NULL)
+        {
+            strcpy(propaganda, buffer);
+            enQueue(&qPropagandas, (void *)propaganda);
+        }
+    }
+    fclose(file);
 }
 
 /// @brief Pega a próxima propaganda da fila de propagandas
 /// @return Retorna a propaganda.
-char* pegarPropaganda()
+char *pegarPropaganda()
 {
-    void* ref = deQueue(&qPropagandas);
-    return (char*) ref;
+    void *ref = deQueue(&qPropagandas);
+    return (char *)ref;
 }
 
 /// @brief Devolve uma propaganda para a fila de propagandas.
-/// @param propaganda 
-void devolverPropaganda(char* propaganda)
+/// @param propaganda
+void devolverPropaganda(char *propaganda)
 {
-    enQueue(&qPropagandas, (void*)propaganda);
+    enQueue(&qPropagandas, (void *)propaganda);
+}
+
+FILE *criarArquivoPropagandasPadrao()
+{
+    FILE *file = fopen("propagandas.bin", "wb+");
+    if (file != NULL)
+    {
+        fprintf(file, "Volt - Sinta a energia que move você.\n");
+        fprintf(file, "Zest - Mais que um sabor, uma revolução.\n");
+        fprintf(file, "Nexo - Tecnologia que entende o seu mundo.\n");
+        fprintf(file, "Vira - Vista o que você acredita.\n");
+        fprintf(file, "Lume - O futuro começa com uma escolha.\n");
+        rewind(file);
+    }
+
+    return file;
 }

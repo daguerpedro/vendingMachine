@@ -9,7 +9,7 @@ RESULTADO_ESTADO estadoListar()
     
     char* propaganda = pegarPropaganda();
     printf("[PROPAGANDA] %s\n", propaganda);
-    //devolverPropaganda(propaganda);
+    devolverPropaganda(propaganda);
 
     printf("\n1. VOLTAR\n2. PROXIMO\n3. MENU CONFIG\n4. SAIR\n");
 
