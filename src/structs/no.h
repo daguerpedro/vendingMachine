@@ -1,6 +1,6 @@
 #ifndef _NO_H
 #define _NO_H
-/// @brief Nó genérico 
+/// @brief Nó genérico usado em todas as estruturas
 typedef struct NO
 {
     struct NO *anterior;

@@ -24,7 +24,7 @@ void voltarEstado(STACK *stack, ESTADO *estadoAtual)
 {
     if (stackVazia(stack))
         return;
-    *estadoAtual = *(ESTADO *)popEstado(stack);
+    *estadoAtual = *(ESTADO *)popStack(stack);
 }
 
 /// @brief Processa o resultado de um estado em específico.
@@ -45,9 +45,11 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
 
-        //TODO: limpar saldo / devolver troco
-        if(*copia == PAGAR) 
+        // TODO: limpar saldo / devolver troco
+        if (*copia == PAGAR)
+        {
             limparStack(stack);
+        }
 
         *estadoAtual = proximo;
         return;
@@ -79,6 +81,11 @@ void processarEstados(STACK *stack, ESTADO *estadoAtual)
         switch (*estadoAtual)
         {
         case LISTAR:
+            //https://stackoverflow.com/questions/2347770/how-do-you-clear-the-console-screen-in-c
+            #ifndef DEBUG
+            system("cls||clear");
+            #endif
+
             processarResultado(stack, estadoListar(), estadoAtual, SELECIONAR);
             break;
 

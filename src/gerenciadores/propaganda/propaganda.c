@@ -7,7 +7,6 @@
 
 QUEUE qPropagandas;
 
-/// @brief Inicia o gerenciador de propagandas, assim como a fila de propagandas.
 void iniciarGerenciadorPropaganda()
 {
     iniciarQueue(&qPropagandas);
@@ -51,16 +50,12 @@ void carregarPropagandas()
     fclose(file);
 }
 
-/// @brief Pega a próxima propaganda da fila de propagandas
-/// @return Retorna a propaganda.
 char *pegarPropaganda()
 {
     void *ref = deQueue(&qPropagandas);
     return (char *)ref;
 }
 
-/// @brief Devolve uma propaganda para a fila de propagandas.
-/// @param propaganda
 void devolverPropaganda(char *propaganda)
 {
     enQueue(&qPropagandas, (void *)propaganda);

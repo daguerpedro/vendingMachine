@@ -1,0 +1,17 @@
+PROJECT_NAME           = "Vending Machine"
+PROJECT_BRIEF          = "Projeto final para disciplina de programação de computadores II. Curso de engenharia eletrônica - IFSC"
+OUTPUT_DIRECTORY       = docs           # pasta onde a doc será gerada
+INPUT                  = src            # pasta (ou arquivos) do seu código C
+RECURSIVE              = YES            # busca em subpastas
+FILE_PATTERNS          = *.c *.h        # extensões a documentar
+GENERATE_LATEX         = NO             # se não precisar de PDF via LaTeX
+GENERATE_HTML          = YES            # para gerar HTML
+EXTRACT_ALL           = YES
+EXTRACT_PRIVATE       = YES
+EXTRACT_STATIC        = YES
+EXTRACT_LOCAL_CLASSES = YES
+JAVADOC_AUTOBRIEF     = YES
+QT_AUTOBRIEF          = YES
+MARKDOWN_SUPPORT      = YES
+OPTIMIZE_OUTPUT_FOR_C = YES
+FILE_PATTERNS = *.c *.h

@@ -3,8 +3,6 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
-/// @brief Inicia a lista
-/// @param list 
 void iniciarList(LIST *list)
 {
     list->count = 0;
@@ -12,8 +10,6 @@ void iniciarList(LIST *list)
     list->final = NULL;
 }
 
-/// @brief Limpa a lista
-/// @param list 
 void limparList(LIST *list)
 {
     NO *temp;
@@ -28,17 +24,11 @@ void limparList(LIST *list)
     list->inicio = NULL;
 }
 
-/// @brief Verifica se a lista está vazia (inicio == NULL)
-/// @param list 
-/// @return true se vazia 
 bool listVazia(LIST *list)
 {
     return (list->inicio == NULL);
 }
 
-/// @brief Insere no final da lista
-/// @param list 
-/// @param data void*, estrutura genérica
 void pushList(LIST *list, void *data)
 {
     NO *novo = malloc(sizeof(NO));
@@ -60,9 +50,6 @@ void pushList(LIST *list, void *data)
     list->count++;
 }
 
-/// @brief Remove e libera da memória o nó na posição idx
-/// @param list 
-/// @param idx 
 void removeList(LIST *list, int idx)
 {
     if (listVazia(list) || idx < 0)
@@ -93,10 +80,6 @@ void removeList(LIST *list, int idx)
     list->count--;
 }
 
-/// @brief Insere na lista em uma posição.
-/// @param list 
-/// @param idx 
-/// @param data void*, estrutura genérica
 void insertList(LIST *list, int idx, void *data)
 {
     if (idx <= 0)
@@ -139,10 +122,6 @@ void insertList(LIST *list, int idx, void *data)
     list->count++;
 }
 
-/// @brief Retorna a estrutura genérica na posição idx
-/// @param list 
-/// @param idx 
-/// @return 
 void *getList(LIST *list, int idx)
 {
     if (listVazia(list) || idx < 0 || idx >= list->count)

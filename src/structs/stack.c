@@ -5,24 +5,17 @@
 
 #include "stack.h"
 
-/// @brief Inicia uma stack
-/// @param stack Referência para stack
 void iniciarStack(STACK *stack)
 {
     stack->topo = NULL;
 }
 
-/// @brief Verifica se stack está vazia
-/// @param stack Ref para stack
-/// @return verdadiro se vazia
+
 bool stackVazia(STACK *stack)
 {
     return stack->topo == NULL;
 }
 
-/// @brief Adiciona um valor à stack
-/// @param stack Ref para stack
-/// @param valor Dado genérico
 void pushStack(STACK *stack, void* valor)
 {
     NO *no = malloc(sizeof(NO));
@@ -31,7 +24,7 @@ void pushStack(STACK *stack, void* valor)
     stack->topo = no;
 }
 
-void* popEstado(STACK *stack)
+void* popStack(STACK *stack)
 {
     if (stackVazia(stack))
         return NULL;
@@ -50,7 +43,7 @@ void limparStack(STACK *stack)
     NO *no = stack->topo;
     while (!stackVazia(stack))
     {
-        popEstado(stack);
+        popStack(stack);
         no = stack->topo;
     }
 }
