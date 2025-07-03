@@ -3,12 +3,13 @@
 #include <maquinaestados.h>
 #include <structs/stack.h>
 
-#include <estados/config/config.h>
-#include <estados/listar/listar.h>
-#include <estados/pagar/pagar.h>
-#include <estados/selecionar/selecionar.h>
+#include <config/config.h>
+#include <listar/listar.h>
+#include <pagar/pagar.h>
+#include <selecionar.h>
 
-#include <gerenciadores/propaganda/propaganda.h>
+#include <propaganda.h>
+#include <produtos.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -43,6 +44,10 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
         ESTADO *copia = malloc(sizeof(ESTADO));
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
+
+        //TODO: limpar saldo / devolver troco
+        if(*copia == PAGAR) 
+            limparStack(stack);
 
         *estadoAtual = proximo;
         return;
@@ -104,9 +109,11 @@ void iniciarMaquinaEstados()
 
     iniciarStack(&stack);
     iniciarGerenciadorPropaganda();
+    iniciarGerenciadorProdutos();
 
     processarEstados(&stack, &estadoAtual);
 
+    limparGerenciadorProdutos();
     limparGerenciadorPropaganda();
     limparStack(&stack);
 }

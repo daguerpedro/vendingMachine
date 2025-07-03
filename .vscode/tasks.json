@@ -18,6 +18,7 @@
                 "${workspaceFolder}/src/estados/pagar/*.c",
                 "${workspaceFolder}/src/estados/selecionar/*.c",
                 "${workspaceFolder}/src/gerenciadores/propaganda/*.c",
+                "${workspaceFolder}/src/gerenciadores/produtos/*.c",
 
                 "-I${workspaceFolder}/src/",
                 "-I${workspaceFolder}/src/structs/",
@@ -26,7 +27,8 @@
                 "-I${workspaceFolder}/src/estados/listar/",
                 "-I${workspaceFolder}/src/estados/pagar/",
                 "-I${workspaceFolder}/src/estados/selecionar/",
-                "-I${workspaceFolder}/src/gerenciadores/propaganda/",
+                "-I${workspaceFolder}/src/gerenciadores/propaganda/",                
+                "-I${workspaceFolder}/src/gerenciadores/produtos/",
                 "-o",
                 "${workspaceFolder}/rel/app.exe"
             ],
