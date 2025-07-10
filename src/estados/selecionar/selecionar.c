@@ -1,22 +1,53 @@
 #include "selecionar.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+
+#include <input.h>
+#include <gerenciadores/produtos/produtos.h>
+
+/// @brief Verificar se produto é valido (!deletado & estoque & listado)
+/// @param i idx do produto
+/// @return true se valido
+bool verificarProduto(int i)
+{
+    return produtoValido(i);
+}
+
+/// @brief Seleciona um produto, verificando acao de voltar/sair/menu_configuracoes
+/// @param result Variavel que armazenara o resultado
+void selecionar(RESULTADO_ESTADO* result)
+{
+    int entrada = captarEntrada();
+    switch (entrada)
+    {
+    case -1:
+        *result = SAIR;
+        return;
+    case 0:
+        *result = VOLTAR;
+        return;
+    case -9:
+        *result = MENU_ADM;
+        return;
+    default: // Se nao queremos sair nem ir para o menu de configuração, vamos verificar se o produto é valido
+        break;
+    }
+
+    if (verificarProduto(entrada))
+    {
+        *result = PROXIMO;
+        selecionaProduto(entrada);
+    }
+    else 
+        selecionar(result);
+
+}
+
 RESULTADO_ESTADO estadoSelecionar()
 {
-    printf("Você está no estado de selecionar.\n1. VOLTAR\n2. PROXIMO\n3. MENU CONFIG\n4. SAIR\n");
-
-    int r;
-    int k = 0;
-    do
-    {
-        k = scanf("%i", &r);
-    } while (k <= 0 && r < 4);
-
-    if (r == 1)
-        return VOLTAR;
-    if (r == 2)
-        return PROXIMO;
-    if (r == 3)
-        return MENU_ADM;
-    if (r == 4)
-        return SAIR;
+    printf("[-1: SAIR | 0 VOLTAR]: ");
+    RESULTADO_ESTADO res;
+    selecionar(&res);
+    return res;
 }

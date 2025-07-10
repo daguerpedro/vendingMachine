@@ -1,31 +1,23 @@
 #include "listar.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include <gerenciadores/propaganda/propaganda.h>
+#include <gerenciadores/produtos/produtos.h>
+
+/// @brief Mostra propaganda na tela e devolve ao fim da fila
+void mostrarPropaganda()
+{
+    char *propaganda = pegarPropaganda();
+    printf("> %s <\n\n", propaganda);
+    devolverPropaganda(propaganda);
+}
 
 RESULTADO_ESTADO estadoListar()
 {
-    printf("Você está no estado de listar.\n");
-    
-    char* propaganda = pegarPropaganda();
-    printf("[PROPAGANDA] %s\n", propaganda);
-    devolverPropaganda(propaganda);
-
-    printf("\n1. VOLTAR\n2. PROXIMO\n3. MENU CONFIG\n4. SAIR\n");
-
-    int r;
-    int k = 0;
-    do
-    {
-        k = scanf("%i", &r);
-    } while (k <= 0 && r < 4);
-
-    if (r == 1)
-        return VOLTAR;
-    if (r == 2)
-        return PROXIMO;
-    if (r == 3)
-        return MENU_ADM;
-    if (r == 4)
-        return SAIR;
+    mostrarPropaganda();
+    listarProdutos();
+    printf("\n");
+    return PROXIMO;
 }

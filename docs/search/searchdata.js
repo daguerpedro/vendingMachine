@@ -2,13 +2,12 @@ var indexSectionsWithContent =
 {
   0: "acdefgilmnpqrstuv",
   1: "lnpqs",
-  2: "clmnpqrs",
+  2: "cilmnpqrs",
   3: "cdegilmpqrsv",
-  4: "acefilnpqrstuv",
+  4: "acdefinpqrstuv",
   5: "elnpqrs",
   6: "er",
-  7: "clmpsv",
-  8: "d"
+  7: "clmpsv"
 };
 
 var indexSectionNames =
@@ -20,8 +19,7 @@ var indexSectionNames =
   4: "variables",
   5: "typedefs",
   6: "enums",
-  7: "enumvalues",
-  8: "defines"
+  7: "enumvalues"
 };
 
 var indexSectionLabels =
@@ -33,7 +31,6 @@ var indexSectionLabels =
   4: "Variables",
   5: "Typedefs",
   6: "Enumerations",
-  7: "Enumerator",
-  8: "Macros"
+  7: "Enumerator"
 };
 

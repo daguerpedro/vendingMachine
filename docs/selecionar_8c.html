@@ -110,9 +110,19 @@ $(function(){initNavTree('selecionar_8c.html',''); initResizable(true); });
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="selecionar_8h_source.html">selecionar.h</a>&quot;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;<a class="el" href="input_8h_source.html">input.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="produtos_8h_source.html">gerenciadores/produtos/produtos.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a07ce8d04407649c0b787021533e54ad3" id="r_a07ce8d04407649c0b787021533e54ad3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07ce8d04407649c0b787021533e54ad3">verificarProduto</a> (int i)</td></tr>
+<tr class="memdesc:a07ce8d04407649c0b787021533e54ad3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verificar se produto é valido (!deletado &amp; estoque &amp; listado)  <br /></td></tr>
+<tr class="separator:a07ce8d04407649c0b787021533e54ad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0815090bf67d723de45590f6830dbe8c" id="r_a0815090bf67d723de45590f6830dbe8c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0815090bf67d723de45590f6830dbe8c">selecionar</a> (<a class="el" href="resultadoestado_8h.html#aa29f906ccb424faa097559ca9e8bc7e1">RESULTADO_ESTADO</a> *result)</td></tr>
+<tr class="memdesc:a0815090bf67d723de45590f6830dbe8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seleciona um produto, verificando acao de voltar/sair/menu_configuracoes.  <br /></td></tr>
+<tr class="separator:a0815090bf67d723de45590f6830dbe8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3a454118ddbdee2771b2027faf133e1" id="r_ae3a454118ddbdee2771b2027faf133e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="resultadoestado_8h.html#aa29f906ccb424faa097559ca9e8bc7e1">RESULTADO_ESTADO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae3a454118ddbdee2771b2027faf133e1">estadoSelecionar</a> ()</td></tr>
 <tr class="separator:ae3a454118ddbdee2771b2027faf133e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -131,6 +141,57 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0815090bf67d723de45590f6830dbe8c" name="a0815090bf67d723de45590f6830dbe8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0815090bf67d723de45590f6830dbe8c">&#9670;&#160;</a></span>selecionar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void selecionar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="resultadoestado_8h.html#aa29f906ccb424faa097559ca9e8bc7e1">RESULTADO_ESTADO</a> *</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Seleciona um produto, verificando acao de voltar/sair/menu_configuracoes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>Variavel que armazenara o resultado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07ce8d04407649c0b787021533e54ad3" name="a07ce8d04407649c0b787021533e54ad3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ce8d04407649c0b787021533e54ad3">&#9670;&#160;</a></span>verificarProduto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool verificarProduto </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verificar se produto é valido (!deletado &amp; estoque &amp; listado) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>idx do produto </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true se valido </dd></dl>
 
 </div>
 </div>

@@ -3,25 +3,29 @@
 #include <stdlib.h>
 #include <string.h>
 
-int saldo = 0;
+#include <input.h>
+#include <gerenciadores/produtos/produtos.h>
 
+float saldo = 0;
+//TODO: CRIAR STACK DE MOEDAS INSERIDAS PARA PODER DESFAZER A AÇÃO.
+//TODO: TROCO
+//TPDP: ENTREGAR PRODUTO
+
+void pegarInfoProduto()
+{
+    PRODUTO_HEADER selecionado = produtoSelecionado();
+    printf("> %s custa R$ %0.2f\n", selecionado.name, selecionado.preço);
+    printf("> Seu saldo: %0.2f\n", saldo);
+}
+
+void mostrarMoedas()
+{
+    printf("[INSIRA MOEDAS] (1) R$ 0.25 (2) R$ 0.50 (3) R$ 1.00: ");
+}
 RESULTADO_ESTADO estadoPagar()
 {
-    saldo ++;
-    printf("Você está no estado de pagar.\nSaldo: $%02i.\n1. VOLTAR\n2. PROXIMO\n3. MENU CONFIG\n4. SAIR\n", saldo);
-    int r;
-    int k = 0;
-    do
-    {
-        k = scanf("%i", &r);
-    } while (k <= 0 && r < 4);
+   pegarInfoProduto();
+   mostrarMoedas();
 
-    if(r == 1) 
-        return VOLTAR;
-    if(r == 2)
-        return PROXIMO;
-    if(r == 3)
-        return MENU_ADM;
-    if(r == 4)
-        return SAIR;
+   return PROXIMO;
 }

@@ -1,5 +1,3 @@
-#include <settings.h>
-
 #include <maquinaestados.h>
 #include <structs/stack.h>
 
@@ -41,6 +39,7 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
 
     if (resultado == PROXIMO)
     {
+        //TODO: Check malloc error
         ESTADO *copia = malloc(sizeof(ESTADO));
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
@@ -63,6 +62,7 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
 
     if (resultado == MENU_ADM)
     {
+        //TODO: Check malloc error
         ESTADO *copia = malloc(sizeof(ESTADO));
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
@@ -81,10 +81,8 @@ void processarEstados(STACK *stack, ESTADO *estadoAtual)
         switch (*estadoAtual)
         {
         case LISTAR:
-            //https://stackoverflow.com/questions/2347770/how-do-you-clear-the-console-screen-in-c
-            #ifndef DEBUG
-            system("cls||clear");
-            #endif
+            printf("\033[2J\033[H");
+            fflush(stdout);
 
             processarResultado(stack, estadoListar(), estadoAtual, SELECIONAR);
             break;

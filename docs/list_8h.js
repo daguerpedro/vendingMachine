@@ -3,6 +3,7 @@ var list_8h =
     [ "LIST", "struct_l_i_s_t.html", "struct_l_i_s_t" ],
     [ "LIST", "list_8h.html#a919ed711f9b02b104096b04d8ae3e64a", null ],
     [ "getList", "list_8h.html#a8ff1e9d155d2ba5bb6052c14e6cd1dc4", null ],
+    [ "indexOf", "list_8h.html#a6b382b8dcca98e92c49cb6fd270b4f37", null ],
     [ "iniciarList", "list_8h.html#a75881d7fa3b73bd961dc3a061b9b7761", null ],
     [ "insertList", "list_8h.html#a294b4ad114f4d17404b2ec44d64e97c1", null ],
     [ "limparList", "list_8h.html#a70855243c9797b6e28a121a6b5d41d47", null ],

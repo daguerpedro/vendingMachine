@@ -26,6 +26,7 @@ void limparQueue(QUEUE *queue)
 
 void enQueue(QUEUE *queue, void *valor)
 {
+    //TODO: Check malloc error
     NO *no = malloc(sizeof(NO));
     no->valor = valor;
     no->proximo = NULL;

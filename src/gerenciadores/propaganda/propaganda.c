@@ -13,13 +13,11 @@ void iniciarGerenciadorPropaganda()
     carregarPropagandas();
 }
 
-/// @brief Finaliza e limpa as memórias utilizadas pelo gerenciador.
 void limparGerenciadorPropaganda()
 {
     limparQueue(&qPropagandas);
 }
 
-/// @brief Carrega o arquivo de propagandas.
 void carregarPropagandas()
 {
     FILE *file = fopen("propagandas.bin", "rb");
@@ -40,6 +38,7 @@ void carregarPropagandas()
         if (buffer[len - 1] == '\n')
             buffer[len - 1] = '\0';
 
+        // TODO: Print if malloc error
         char *propaganda = malloc(strlen(buffer) + 1);
         if (propaganda != NULL)
         {

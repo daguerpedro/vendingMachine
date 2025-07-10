@@ -31,6 +31,7 @@ bool listVazia(LIST *list)
 
 void pushList(LIST *list, void *data)
 {
+    // TODO: Check malloc error
     NO *novo = malloc(sizeof(NO));
     novo->valor = data;
     novo->anterior = NULL;
@@ -84,6 +85,7 @@ void insertList(LIST *list, int idx, void *data)
 {
     if (idx <= 0)
     {
+        // TODO: Check malloc error
         NO *novo = malloc(sizeof(NO));
         novo->valor = data;
         novo->anterior = NULL;
@@ -110,6 +112,7 @@ void insertList(LIST *list, int idx, void *data)
         no = no->proximo;
 
     NO *anterior = no->anterior;
+    // TODO: Check malloc error
     NO *novo = malloc(sizeof(NO));
 
     novo->valor = data;
@@ -155,4 +158,24 @@ void printList(LIST *list)
     }
 
     printf("FIM\n");
+}
+
+int indexOf(LIST *list, void *data)
+{
+    if (listVazia(list))
+        return -1;
+
+    NO *temp = list->inicio;
+    int i = 0;
+
+    while (temp != NULL)
+    {
+        if(temp->valor == data)
+            break;
+        
+        temp = temp->proximo;
+        i++;
+    }
+
+    return i;
 }

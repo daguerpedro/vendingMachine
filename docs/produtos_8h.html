@@ -111,27 +111,48 @@ $(function(){initNavTree('produtos_8h.html',''); initResizable(true); });
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div>
 <p><a href="produtos_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrutura para produtos.  <a href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
 <tr class="memitem:a0373bce60e3b64005f48f934163c0faa" id="r_a0373bce60e3b64005f48f934163c0faa"><td class="memItemLeft" align="right" valign="top">typedef struct PRODUTO_HEADER&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0373bce60e3b64005f48f934163c0faa">PRODUTO_HEADER</a></td></tr>
+<tr class="memdesc:a0373bce60e3b64005f48f934163c0faa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Estrutura para produtos.  <br /></td></tr>
 <tr class="separator:a0373bce60e3b64005f48f934163c0faa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:aa5faef70d06651f93903fa8695f8094d" id="r_aa5faef70d06651f93903fa8695f8094d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa5faef70d06651f93903fa8695f8094d">iniciarGerenciadorProdutos</a> ()</td></tr>
+<tr class="memdesc:aa5faef70d06651f93903fa8695f8094d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o gerenciador de produtos.  <br /></td></tr>
 <tr class="separator:aa5faef70d06651f93903fa8695f8094d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6b331ff32693182d36490a05abf0ab1" id="r_ab6b331ff32693182d36490a05abf0ab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6b331ff32693182d36490a05abf0ab1">limparGerenciadorProdutos</a> ()</td></tr>
+<tr class="memdesc:ab6b331ff32693182d36490a05abf0ab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpa o gerenciador de produtos.  <br /></td></tr>
 <tr class="separator:ab6b331ff32693182d36490a05abf0ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a681c4eabc002500249e51a0b91dd4ab0" id="r_a681c4eabc002500249e51a0b91dd4ab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a681c4eabc002500249e51a0b91dd4ab0">carregarProdutos</a> ()</td></tr>
+<tr class="memdesc:a681c4eabc002500249e51a0b91dd4ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega o arquivo de produtos para a lista de produtos na memória.  <br /></td></tr>
 <tr class="separator:a681c4eabc002500249e51a0b91dd4ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbf4fdb8c5c275b1f95cf633868bfb03" id="r_adbf4fdb8c5c275b1f95cf633868bfb03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbf4fdb8c5c275b1f95cf633868bfb03">listarProdutos</a> ()</td></tr>
+<tr class="memdesc:adbf4fdb8c5c275b1f95cf633868bfb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os produtos.  <br /></td></tr>
+<tr class="separator:adbf4fdb8c5c275b1f95cf633868bfb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a197cf1480a60b053049a9ebdde9deb30" id="r_a197cf1480a60b053049a9ebdde9deb30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a197cf1480a60b053049a9ebdde9deb30">produtoValido</a> (int i)</td></tr>
+<tr class="memdesc:a197cf1480a60b053049a9ebdde9deb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um produto é valido.  <br /></td></tr>
+<tr class="separator:a197cf1480a60b053049a9ebdde9deb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc5281292e7f311442762df4895dc343" id="r_abc5281292e7f311442762df4895dc343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc5281292e7f311442762df4895dc343">selecionaProduto</a> (int i)</td></tr>
+<tr class="separator:abc5281292e7f311442762df4895dc343"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1307ac949adfa53cfff36a83a08481e8" id="r_a1307ac949adfa53cfff36a83a08481e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1307ac949adfa53cfff36a83a08481e8">produtoSelecionado</a> ()</td></tr>
+<tr class="separator:a1307ac949adfa53cfff36a83a08481e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a603aef3585fbab4c479640288f6c546a" id="r_a603aef3585fbab4c479640288f6c546a"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a603aef3585fbab4c479640288f6c546a">criarArquivoProdutosPadrao</a> ()</td></tr>
+<tr class="separator:a603aef3585fbab4c479640288f6c546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07322ab2db9bb2622ae26376c0993e43" id="r_a07322ab2db9bb2622ae26376c0993e43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07322ab2db9bb2622ae26376c0993e43">criarProduto</a> (char *name, float preço, int estoque, bool naVitrine, FILE *databse)</td></tr>
+<tr class="memdesc:a07322ab2db9bb2622ae26376c0993e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um produto.  <br /></td></tr>
+<tr class="separator:a07322ab2db9bb2622ae26376c0993e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="a0373bce60e3b64005f48f934163c0faa" name="a0373bce60e3b64005f48f934163c0faa"></a>
@@ -145,6 +166,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Estrutura para produtos. </p>
 
 </div>
 </div>
@@ -164,6 +187,74 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Carrega o arquivo de produtos para a lista de produtos na memória. </p>
+
+</div>
+</div>
+<a id="a603aef3585fbab4c479640288f6c546a" name="a603aef3585fbab4c479640288f6c546a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a603aef3585fbab4c479640288f6c546a">&#9670;&#160;</a></span>criarArquivoProdutosPadrao()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FILE * criarArquivoProdutosPadrao </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07322ab2db9bb2622ae26376c0993e43" name="a07322ab2db9bb2622ae26376c0993e43"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07322ab2db9bb2622ae26376c0993e43">&#9670;&#160;</a></span>criarProduto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> * criarProduto </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>name</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>preço</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>estoque</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>naVitrine</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>databse</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cria um produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td>Nome do produto </td></tr>
+    <tr><td class="paramname">preço</td><td>Preço do produto </td></tr>
+    <tr><td class="paramname">estoque</td><td>Valor em estoque </td></tr>
+    <tr><td class="paramname">ativo</td><td>Está ativo para listagem </td></tr>
+    <tr><td class="paramname">database</td><td>Ponteiro para o arquivo de produtos </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ponteiro para estrutura do produto </dd></dl>
+
 </div>
 </div>
 <a id="aa5faef70d06651f93903fa8695f8094d" name="aa5faef70d06651f93903fa8695f8094d"></a>
@@ -181,6 +272,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Inicia o gerenciador de produtos. </p>
+
 </div>
 </div>
 <a id="ab6b331ff32693182d36490a05abf0ab1" name="ab6b331ff32693182d36490a05abf0ab1"></a>
@@ -193,6 +286,87 @@ Functions</h2></td></tr>
           <td class="memname">void limparGerenciadorProdutos </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Limpa o gerenciador de produtos. </p>
+
+</div>
+</div>
+<a id="adbf4fdb8c5c275b1f95cf633868bfb03" name="adbf4fdb8c5c275b1f95cf633868bfb03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbf4fdb8c5c275b1f95cf633868bfb03">&#9670;&#160;</a></span>listarProdutos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void listarProdutos </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lista todos os produtos. </p>
+
+</div>
+</div>
+<a id="a1307ac949adfa53cfff36a83a08481e8" name="a1307ac949adfa53cfff36a83a08481e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1307ac949adfa53cfff36a83a08481e8">&#9670;&#160;</a></span>produtoSelecionado()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> produtoSelecionado </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a197cf1480a60b053049a9ebdde9deb30" name="a197cf1480a60b053049a9ebdde9deb30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a197cf1480a60b053049a9ebdde9deb30">&#9670;&#160;</a></span>produtoValido()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool produtoValido </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um produto é valido. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>numero equivalente na lista </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true se valido </dd></dl>
+
+</div>
+</div>
+<a id="abc5281292e7f311442762df4895dc343" name="abc5281292e7f311442762df4895dc343"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc5281292e7f311442762df4895dc343">&#9670;&#160;</a></span>selecionaProduto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void selecionaProduto </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>

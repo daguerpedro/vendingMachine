@@ -43,4 +43,10 @@ void insertList(LIST* list, int idx, void* data);
 void* getList(LIST* list, int idx);
 void printList(LIST* list);
 
+/// @brief Retorna a posição de um valor na lista
+/// @param list Ref para lista 
+/// @param data Valor
+/// @return numero/posicao na lista
+int indexOf(LIST* list, void*data);
+
 #endif

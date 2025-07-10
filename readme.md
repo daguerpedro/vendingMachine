@@ -1,7 +1,7 @@
 # Máquina de refrigerante
 #### PRG22105 — Programação de Computadores II
-Professor: João Cláudio Elsen Barcellos, joao.barcellos@ifsc.edu.br
-Estudante: Pedro Henrique Daguer
+Professor: João Cláudio Elsen Barcellos, joao.barcellos@ifsc.edu.br  
+Estudante: Pedro Henrique Daguer  
 
 # Máquina de refrigerantes
 **Objetivo e visão geral**: Neste projeto propõe-se o desenvolvimento de uma aplicação, executada

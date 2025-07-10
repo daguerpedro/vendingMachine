@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['resultadoestado_2eh_0',['resultadoestado.h',['../resultadoestado_8h.html',1,'']]]
+  ['queue_2ec_0',['queue.c',['../queue_8c.html',1,'']]],
+  ['queue_2eh_1',['queue.h',['../queue_8h.html',1,'']]]
 ];
