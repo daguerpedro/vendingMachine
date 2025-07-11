@@ -34,10 +34,10 @@ void selecionar(RESULTADO_ESTADO* result)
         break;
     }
 
-    if (verificarProduto(entrada))
+    if (verificarProduto(entrada-1))
     {
         *result = PROXIMO;
-        selecionaProduto(entrada);
+        selecionaProduto(entrada-1);
     }
     else 
         selecionar(result);
@@ -46,7 +46,7 @@ void selecionar(RESULTADO_ESTADO* result)
 
 RESULTADO_ESTADO estadoSelecionar()
 {
-    printf("[-1: SAIR | 0 VOLTAR]: ");
+    printf("[SELECIONAR| -1: SAIR | 0 VOLTAR]: ");
     RESULTADO_ESTADO res;
     selecionar(&res);
     return res;

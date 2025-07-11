@@ -8,6 +8,7 @@
 
 #include <propaganda.h>
 #include <produtos.h>
+#include <moedas.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -39,7 +40,7 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
 
     if (resultado == PROXIMO)
     {
-        //TODO: Check malloc error
+        // TODO: Check malloc error
         ESTADO *copia = malloc(sizeof(ESTADO));
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
@@ -62,7 +63,7 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
 
     if (resultado == MENU_ADM)
     {
-        //TODO: Check malloc error
+        // TODO: Check malloc error
         ESTADO *copia = malloc(sizeof(ESTADO));
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
@@ -78,12 +79,14 @@ void processarEstados(STACK *stack, ESTADO *estadoAtual)
 {
     while (rodar)
     {
+
+        // FIXME: QUANDO VOLTAMOS DO ESTADO PAGAR PARA ESTADO SELECIONAR, A INFORMACAO DOS PRODUTOS NAO APARECE NA TELA, POIS O ESTADO QUE MOSTRA AS INFOS É O DE LISTAR E NAO DE SELECIONAR!
         switch (*estadoAtual)
         {
         case LISTAR:
+            system("clear || cls");
             printf("\033[2J\033[H");
             fflush(stdout);
-
             processarResultado(stack, estadoListar(), estadoAtual, SELECIONAR);
             break;
 
@@ -115,9 +118,11 @@ void iniciarMaquinaEstados()
     iniciarStack(&stack);
     iniciarGerenciadorPropaganda();
     iniciarGerenciadorProdutos();
+    iniciarGerenciadorMoedas();
 
     processarEstados(&stack, &estadoAtual);
 
+    limparGerenciadorMoedas();
     limparGerenciadorProdutos();
     limparGerenciadorPropaganda();
     limparStack(&stack);

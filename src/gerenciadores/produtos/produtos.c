@@ -23,6 +23,7 @@ void listarProdutos()
     if (listVazia(&produtosLista))
         return;
 
+    printf("PRODUTOS: \n\n");
     NO *temp = produtosLista.inicio;
 
     while (temp != NULL)
@@ -136,6 +137,7 @@ void selecionaProduto(int i)
     if(produtoValido(i))
         selecionado = (PRODUTO_HEADER*)getList(&produtosLista, i);
 }
+
 PRODUTO_HEADER produtoSelecionado()
 {
     return *selecionado;
