@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['qpropagandas_0',['qPropagandas',['../propaganda_8c.html#a8172d25eb960a32ab05c44389635e6f8',1,'propaganda.c']]]
+  ['name_0',['name',['../struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html#a9954379b069f96cf01767afb4f6f1b56',1,'PRODUTO_HEADER']]],
+  ['navitrine_1',['naVitrine',['../struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html#a4ca2191f76f60f391d946e98269e9e97',1,'PRODUTO_HEADER']]]
 ];

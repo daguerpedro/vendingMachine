@@ -13,7 +13,6 @@ float saldo = 0;
 void clear()
 {
     system("clear || cls");
-    printf("\033[2J\033[H");
     fflush(stdout);
 }
 
@@ -32,14 +31,14 @@ void pegarInfoProduto()
 
 void mostrarMoedas()
 {
-    printf("[INSIRA MOEDAS] (1) R$ 0.25 (2) R$ 0.50 (3) R$ 1.00\n");
+    printf("[MOEDAS] (1) R$ 0.25 (2) R$ 0.50 (3) R$ 1.00\n");
 }
 
 void informacoes()
 {
     pegarInfoProduto();
     mostrarMoedas();
-    printf("[PAGAMENTO| -1: SAIR | 0 VOLTAR | 4: DESFAZER]: ");
+    printf("[INSIRA MOEDAS | 4: DESFAZER]: \n");
 }
 
 void darTroco()
@@ -62,7 +61,7 @@ void darTroco()
 /// @param result Variavel que armazenara o resultado
 void coletarMoedas(RESULTADO_ESTADO *result)
 {
-    int entrada = captarEntrada();
+    int entrada = captarEntrada(true);
     switch (entrada)
     {
     case -1:
@@ -71,9 +70,7 @@ void coletarMoedas(RESULTADO_ESTADO *result)
     case 0:
         *result = VOLTAR;
         return;
-    case -9:
-        *result = MENU_ADM;
-        return;
+
     case 1:
         inserirMoeda(0.25);
         saldo += 0.25f;
@@ -103,6 +100,8 @@ void coletarMoedas(RESULTADO_ESTADO *result)
 
     if (saldo >= produtoSelecionado().preço)
     {
+        //TODO: TOCAR SOM
+        printf("> Aproveite seu refri!\n");
         *result = PROXIMO;
         return;
     }
@@ -116,8 +115,6 @@ void coletarMoedas(RESULTADO_ESTADO *result)
 
 RESULTADO_ESTADO estadoPagar()
 {
-    clear();
-
     RESULTADO_ESTADO res;
 
     informacoes();

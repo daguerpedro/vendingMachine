@@ -6,19 +6,13 @@
 #include <input.h>
 #include <gerenciadores/produtos/produtos.h>
 
-/// @brief Verificar se produto é valido (!deletado & estoque & listado)
-/// @param i idx do produto
-/// @return true se valido
-bool verificarProduto(int i)
-{
-    return produtoValido(i);
-}
+#include <stdbool.h>
 
-/// @brief Seleciona um produto, verificando acao de voltar/sair/menu_configuracoes
+/// @brief Seleciona um produto
 /// @param result Variavel que armazenara o resultado
 void selecionar(RESULTADO_ESTADO* result)
 {
-    int entrada = captarEntrada();
+    int entrada = captarEntrada(true);
     switch (entrada)
     {
     case -1:
@@ -34,20 +28,20 @@ void selecionar(RESULTADO_ESTADO* result)
         break;
     }
 
-    if (verificarProduto(entrada-1))
+    //Passamos entrada - 1 pois a listagem de produtos adiciona 1 para nao conflitar com o 0 de voltar.
+    if (produtoValido(entrada-1))
     {
         *result = PROXIMO;
         selecionaProduto(entrada-1);
     }
-    else 
+    else //Se não é um produto que exista/válido/disponível captamos a entrada dnv.
         selecionar(result);
-
 }
 
 RESULTADO_ESTADO estadoSelecionar()
 {
-    printf("[SELECIONAR| -1: SAIR | 0 VOLTAR]: ");
     RESULTADO_ESTADO res;
+    listarProdutos();
     selecionar(&res);
     return res;
 }

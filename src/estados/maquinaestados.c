@@ -1,8 +1,9 @@
 #include <maquinaestados.h>
 #include <structs/stack.h>
 
+#include <admin.h>
 #include <config/config.h>
-#include <listar/listar.h>
+#include <inicial/inicial.h>
 #include <pagar/pagar.h>
 #include <selecionar.h>
 
@@ -40,12 +41,16 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
 
     if (resultado == PROXIMO)
     {
-        // TODO: Check malloc error
         ESTADO *copia = malloc(sizeof(ESTADO));
+        if (copia == NULL)
+        {
+            printf("[ERRO] Falha ao cópia de estado.\n");
+            return;
+        }
+
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
 
-        // TODO: limpar saldo / devolver troco
         if (*copia == PAGAR)
         {
             limparStack(stack);
@@ -63,8 +68,13 @@ void processarResultado(STACK *stack, RESULTADO_ESTADO resultado, ESTADO *estado
 
     if (resultado == MENU_ADM)
     {
-        // TODO: Check malloc error
         ESTADO *copia = malloc(sizeof(ESTADO));
+        if (copia == NULL)
+        {
+            printf("[ERRO] Falha ao cópia de estado.\n");
+            return;
+        }
+        
         *copia = *estadoAtual;
         pushStack(stack, (void *)copia);
         *estadoAtual = CONFIGURAR;
@@ -79,15 +89,16 @@ void processarEstados(STACK *stack, ESTADO *estadoAtual)
 {
     while (rodar)
     {
+        system("clear || cls");
+        fflush(stdout);
 
-        // FIXME: QUANDO VOLTAMOS DO ESTADO PAGAR PARA ESTADO SELECIONAR, A INFORMACAO DOS PRODUTOS NAO APARECE NA TELA, POIS O ESTADO QUE MOSTRA AS INFOS É O DE LISTAR E NAO DE SELECIONAR!
+        if(*estadoAtual != INICIAL)
+            mostrarPropaganda();
+                
         switch (*estadoAtual)
         {
-        case LISTAR:
-            system("clear || cls");
-            printf("\033[2J\033[H");
-            fflush(stdout);
-            processarResultado(stack, estadoListar(), estadoAtual, SELECIONAR);
+        case INICIAL:
+            processarResultado(stack, estadoInicial(), estadoAtual, SELECIONAR);
             break;
 
         case SELECIONAR:
@@ -95,11 +106,11 @@ void processarEstados(STACK *stack, ESTADO *estadoAtual)
             break;
 
         case PAGAR:
-            processarResultado(stack, estadoPagar(), estadoAtual, LISTAR);
+            processarResultado(stack, estadoPagar(), estadoAtual, INICIAL);
             break;
 
         case CONFIGURAR:
-            processarResultado(stack, estadoConfig(), estadoAtual, LISTAR);
+            processarResultado(stack, estadoConfig(), estadoAtual, INICIAL);
             break;
 
         default:
@@ -112,18 +123,22 @@ void processarEstados(STACK *stack, ESTADO *estadoAtual)
 void iniciarMaquinaEstados()
 {
     rodar = true;
-    STACK stack;
-    ESTADO estadoAtual = LISTAR;
+    STACK stackEstados;
+    ESTADO estadoAtual = INICIAL;
 
-    iniciarStack(&stack);
+    iniciarStack(&stackEstados);
+
+    iniciarGerenciadorAdmin();
     iniciarGerenciadorPropaganda();
     iniciarGerenciadorProdutos();
     iniciarGerenciadorMoedas();
 
-    processarEstados(&stack, &estadoAtual);
+    processarEstados(&stackEstados, &estadoAtual);
 
     limparGerenciadorMoedas();
     limparGerenciadorProdutos();
     limparGerenciadorPropaganda();
-    limparStack(&stack);
+    limparGerenciadorAdmin();
+    
+    limparStack(&stackEstados);
 }

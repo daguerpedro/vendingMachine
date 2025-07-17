@@ -18,4 +18,7 @@ char* pegarPropaganda();
 
 FILE *criarArquivoPropagandasPadrao();
 
+/// @brief Mostra propaganda na tela e devolve ao fim da fila
+void mostrarPropaganda();
+
 #endif

@@ -1,5 +1,8 @@
 #include "config.h"
 #include <stdio.h>
+
+//TODO: EDITAR CRIAR E DELETAR PRODUTOS
+//TODO: EDITAR MACHINE INFO
 RESULTADO_ESTADO estadoConfig()
 {
     printf("Você está no estado de configurar.\n1. VOLTAR\n2. PROXIMO\n3. MENU CONFIG\n4. SAIR\n");

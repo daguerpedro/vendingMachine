@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['resultado_5festado_0',['RESULTADO_ESTADO',['../resultadoestado_8h.html#ab3eb83bc5a921a88b50b1c8db71968b9',1,'resultadoestado.h']]]
+  ['queue_0',['QUEUE',['../queue_8h.html#a88a1afea1600d0c866ede2e5c2a2eb1a',1,'queue.h']]]
 ];

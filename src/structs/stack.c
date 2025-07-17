@@ -17,8 +17,12 @@ bool stackVazia(STACK *stack)
 
 void pushStack(STACK *stack, void *valor)
 {
-    // TODO: Check malloc error
     NO *no = malloc(sizeof(NO));
+    if(no == NULL)
+    {
+        printf("[ERRO] Falha ao alocar stack.\n");
+        return;
+    }
     no->anterior = stack->topo;
     no->valor = valor;
     stack->topo = no;
@@ -29,8 +33,12 @@ void *popStack(STACK *stack)
     if (stackVazia(stack))
         return NULL;
 
-    // TODO: Check malloc error
     NO *no = malloc(sizeof(NO));
+    if(no == NULL)
+    {
+        printf("[ERRO] Falha ao alocar stack.\n");
+        return NULL;
+    }
     no = stack->topo;
     stack->topo = no->anterior;
 

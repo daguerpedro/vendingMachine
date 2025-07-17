@@ -26,8 +26,12 @@ void limparQueue(QUEUE *queue)
 
 void enQueue(QUEUE *queue, void *valor)
 {
-    //TODO: Check malloc error
     NO *no = malloc(sizeof(NO));
+    if(no == NULL)
+    {
+        printf("[ERRO] Falha ao alocar elemento para fila.\n");
+        return;
+    }
     no->valor = valor;
     no->proximo = NULL;
     no->anterior = NULL;

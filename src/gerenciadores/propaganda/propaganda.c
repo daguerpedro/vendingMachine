@@ -38,12 +38,15 @@ void carregarPropagandas()
         if (buffer[len - 1] == '\n')
             buffer[len - 1] = '\0';
 
-        // TODO: Print if malloc error
         char *propaganda = malloc(strlen(buffer) + 1);
         if (propaganda != NULL)
         {
             strcpy(propaganda, buffer);
             enQueue(&qPropagandas, (void *)propaganda);
+        }
+        else
+        {
+            printf("[ERRO] Falha ao alocar buffer para propaganda.\n");
         }
     }
     fclose(file);
@@ -72,6 +75,17 @@ FILE *criarArquivoPropagandasPadrao()
         fprintf(file, "Lume - O futuro começa com uma escolha.\n");
         rewind(file);
     }
-
+    else
+    {
+        printf("[ERRO] Falha ao criar arquivo propaganda padrão.\n");
+    }
+    
     return file;
+}
+
+void mostrarPropaganda()
+{
+    char *propaganda = pegarPropaganda();
+    printf("> %s <\n\n", propaganda);
+    devolverPropaganda(propaganda);
 }

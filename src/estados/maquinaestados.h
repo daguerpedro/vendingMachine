@@ -3,7 +3,7 @@
 
 typedef enum ESTADO
 {
-    LISTAR,
+    INICIAL,
     SELECIONAR,
     PAGAR,
     CONFIGURAR

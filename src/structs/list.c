@@ -31,8 +31,13 @@ bool listVazia(LIST *list)
 
 void pushList(LIST *list, void *data)
 {
-    // TODO: Check malloc error
     NO *novo = malloc(sizeof(NO));
+    if(novo == NULL)
+    {
+        printf("[ERRO] Falha ao alocar elemento para lista.\n");
+        return;
+    }
+
     novo->valor = data;
     novo->anterior = NULL;
     novo->proximo = NULL;
@@ -85,8 +90,12 @@ void insertList(LIST *list, int idx, void *data)
 {
     if (idx <= 0)
     {
-        // TODO: Check malloc error
         NO *novo = malloc(sizeof(NO));
+        if (novo == NULL)
+        {
+            printf("[ERRO] Falha ao alocar elemento para lista.\n");
+            return;
+        }
         novo->valor = data;
         novo->anterior = NULL;
         novo->proximo = list->inicio;
@@ -112,8 +121,13 @@ void insertList(LIST *list, int idx, void *data)
         no = no->proximo;
 
     NO *anterior = no->anterior;
-    // TODO: Check malloc error
+
     NO *novo = malloc(sizeof(NO));
+    if (novo == NULL)
+    {
+        printf("[ERRO] Falha ao alocar elemento para lista.\n");
+        return;
+    }
 
     novo->valor = data;
     novo->anterior = anterior;
@@ -170,9 +184,9 @@ int indexOf(LIST *list, void *data)
 
     while (temp != NULL)
     {
-        if(temp->valor == data)
+        if (temp->valor == data)
             break;
-        
+
         temp = temp->proximo;
         i++;
     }

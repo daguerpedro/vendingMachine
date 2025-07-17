@@ -3,5 +3,7 @@
 ./rel/*
 *.bin
 *.exe
+**.bin
+**.exe
 .vscode/launch.json
 projeto.pdf

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['no_0',['NO',['../no_8h.html#a9fadbc633ba3dc7b194c234ea89d01cb',1,'no.h']]]
+  ['machine_5finfo_0',['MACHINE_INFO',['../admin_8h.html#aa7d9531cdfbc9e9248243ece03c611f5',1,'admin.h']]]
 ];

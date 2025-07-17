@@ -13,7 +13,7 @@
             "preLaunchTask": "build",
             "cwd": "${workspaceFolder}/rel/",
             "environment": [],
-            "externalConsole": false,
+            "externalConsole": true,
             "MIMode": "gdb",
             "setupCommands": [
                 {

@@ -29,9 +29,9 @@ void listarProdutos()
     while (temp != NULL)
     {
         PRODUTO_HEADER produto = *(PRODUTO_HEADER *)temp->valor;
-        if(produto.naVitrine)
+        if (produto.naVitrine)
         {
-            printf("(%02i) %s R$ %0.2f [%01i]\n", indexOf(&produtosLista, temp->valor)+1, produto.name, produto.preço, produto.estoque);
+            printf("(%02i) %s R$ %0.2f [%01i]\n", indexOf(&produtosLista, temp->valor) + 1, produto.name, produto.preço, produto.estoque);
         }
         temp = temp->proximo;
     }
@@ -39,8 +39,12 @@ void listarProdutos()
 
 PRODUTO_HEADER *criarProduto(char *name, float preço, int estoque, bool naVitrine, FILE *database)
 {
-    // TODO: Check malloc error
     PRODUTO_HEADER *novo = malloc(sizeof(PRODUTO_HEADER));
+    if (novo == NULL)
+    {
+        printf("[ERRO] Falha ao alocar produto.\n");
+        return NULL;
+    }
 
     strncpy(novo->name, name, sizeof(novo->name) - 1);
     novo->name[sizeof(novo->name) - 1] = '\0';
@@ -90,6 +94,10 @@ FILE *criarArquivoProdutosPadrao()
         free(criarProduto("Guaraná Jesus", 1.5, 3, true, file));
         rewind(file);
     }
+    else
+    {
+        printf("[ERRO] Falha ao criar arquivo produtos padrão.\n");
+    }
 
     return file;
 }
@@ -112,8 +120,13 @@ void carregarProdutos()
     {
         if (idx.deletado == false)
         {
-            // TODO: Check malloc
             PRODUTO_HEADER *registro = malloc(sizeof(PRODUTO_HEADER));
+            if (registro == NULL)
+            {
+                printf("[ERRO] Falha ao alocar produto.\n");
+                return;
+            }
+
             *registro = idx;
             pushList(&produtosLista, (void *)registro);
         }
@@ -123,19 +136,22 @@ void carregarProdutos()
 
 bool produtoValido(int i)
 {
-    if(listVazia(&produtosLista)) return false;
-    PRODUTO_HEADER* produto = getList(&produtosLista, i);
-    if(produto == NULL) return false;
-    if(produto->deletado || produto->naVitrine == false || produto->estoque <= 0) return false;
+    if (listVazia(&produtosLista))
+        return false;
+    PRODUTO_HEADER *produto = getList(&produtosLista, i);
+    if (produto == NULL)
+        return false;
+    if (produto->deletado || produto->naVitrine == false || produto->estoque <= 0)
+        return false;
     return true;
 }
 
-PRODUTO_HEADER* selecionado;
+PRODUTO_HEADER *selecionado;
 
 void selecionaProduto(int i)
 {
-    if(produtoValido(i))
-        selecionado = (PRODUTO_HEADER*)getList(&produtosLista, i);
+    if (produtoValido(i))
+        selecionado = (PRODUTO_HEADER *)getList(&produtosLista, i);
 }
 
 PRODUTO_HEADER produtoSelecionado()

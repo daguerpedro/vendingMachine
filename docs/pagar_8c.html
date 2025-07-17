@@ -115,13 +115,25 @@ $(function(){initNavTree('pagar_8c.html',''); initResizable(true); });
 <code>#include &lt;string.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="input_8h_source.html">input.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="produtos_8h_source.html">gerenciadores/produtos/produtos.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="moedas_8h_source.html">gerenciadores/moedas/moedas.h</a>&gt;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:ac8bb3912a3ce86b15842e79d0b421204" id="r_ac8bb3912a3ce86b15842e79d0b421204"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac8bb3912a3ce86b15842e79d0b421204">clear</a> ()</td></tr>
+<tr class="separator:ac8bb3912a3ce86b15842e79d0b421204"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7167f5c196fc5e167bfabde1a730e81d" id="r_a7167f5c196fc5e167bfabde1a730e81d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7167f5c196fc5e167bfabde1a730e81d">pause</a> ()</td></tr>
+<tr class="separator:a7167f5c196fc5e167bfabde1a730e81d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a713a04a59522acc26a1167a576c4ad9e" id="r_a713a04a59522acc26a1167a576c4ad9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a713a04a59522acc26a1167a576c4ad9e">pegarInfoProduto</a> ()</td></tr>
 <tr class="separator:a713a04a59522acc26a1167a576c4ad9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c7c7b96d7ee0df6901890cb8581b57c" id="r_a6c7c7b96d7ee0df6901890cb8581b57c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6c7c7b96d7ee0df6901890cb8581b57c">mostrarMoedas</a> ()</td></tr>
 <tr class="separator:a6c7c7b96d7ee0df6901890cb8581b57c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47b4c9e6effb878c8a615dbd15263810" id="r_a47b4c9e6effb878c8a615dbd15263810"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47b4c9e6effb878c8a615dbd15263810">informacoes</a> ()</td></tr>
+<tr class="separator:a47b4c9e6effb878c8a615dbd15263810"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28eef9e03f19c3a578a2d426e0ce1863" id="r_a28eef9e03f19c3a578a2d426e0ce1863"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a28eef9e03f19c3a578a2d426e0ce1863">darTroco</a> ()</td></tr>
+<tr class="separator:a28eef9e03f19c3a578a2d426e0ce1863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7187017605e83821476b3328071e338f" id="r_a7187017605e83821476b3328071e338f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7187017605e83821476b3328071e338f">coletarMoedas</a> (<a class="el" href="resultadoestado_8h.html#aa29f906ccb424faa097559ca9e8bc7e1">RESULTADO_ESTADO</a> *result)</td></tr>
+<tr class="memdesc:a7187017605e83821476b3328071e338f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Coleta moedas, verificando acao de voltar/sair/menu_configuracoes.  <br /></td></tr>
+<tr class="separator:a7187017605e83821476b3328071e338f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7f57813a37b0b793156794b97e77f22c" id="r_a7f57813a37b0b793156794b97e77f22c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="resultadoestado_8h.html#aa29f906ccb424faa097559ca9e8bc7e1">RESULTADO_ESTADO</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f57813a37b0b793156794b97e77f22c">estadoPagar</a> ()</td></tr>
 <tr class="separator:a7f57813a37b0b793156794b97e77f22c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -131,6 +143,65 @@ Variables</h2></td></tr>
 <tr class="separator:a053787aa31e36d2305553048e761d7c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ac8bb3912a3ce86b15842e79d0b421204" name="ac8bb3912a3ce86b15842e79d0b421204"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8bb3912a3ce86b15842e79d0b421204">&#9670;&#160;</a></span>clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clear </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7187017605e83821476b3328071e338f" name="a7187017605e83821476b3328071e338f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7187017605e83821476b3328071e338f">&#9670;&#160;</a></span>coletarMoedas()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void coletarMoedas </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="resultadoestado_8h.html#aa29f906ccb424faa097559ca9e8bc7e1">RESULTADO_ESTADO</a> *</td>          <td class="paramname"><span class="paramname"><em>result</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Coleta moedas, verificando acao de voltar/sair/menu_configuracoes. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">result</td><td>Variavel que armazenara o resultado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a28eef9e03f19c3a578a2d426e0ce1863" name="a28eef9e03f19c3a578a2d426e0ce1863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28eef9e03f19c3a578a2d426e0ce1863">&#9670;&#160;</a></span>darTroco()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void darTroco </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a7f57813a37b0b793156794b97e77f22c" name="a7f57813a37b0b793156794b97e77f22c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f57813a37b0b793156794b97e77f22c">&#9670;&#160;</a></span>estadoPagar()</h2>
 
@@ -148,6 +219,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a47b4c9e6effb878c8a615dbd15263810" name="a47b4c9e6effb878c8a615dbd15263810"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47b4c9e6effb878c8a615dbd15263810">&#9670;&#160;</a></span>informacoes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void informacoes </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a6c7c7b96d7ee0df6901890cb8581b57c" name="a6c7c7b96d7ee0df6901890cb8581b57c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6c7c7b96d7ee0df6901890cb8581b57c">&#9670;&#160;</a></span>mostrarMoedas()</h2>
 
@@ -156,6 +244,23 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">void mostrarMoedas </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7167f5c196fc5e167bfabde1a730e81d" name="a7167f5c196fc5e167bfabde1a730e81d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7167f5c196fc5e167bfabde1a730e81d">&#9670;&#160;</a></span>pause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void pause </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>

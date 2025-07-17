@@ -11,5 +11,6 @@ var searchData=
   ['stack_8',['STACK',['../struct_s_t_a_c_k.html',1,'STACK'],['../stack_8h.html#a3d36f5af7c0218824ce98c10cb353bc5',1,'STACK:&#160;stack.h']]],
   ['stack_2ec_9',['stack.c',['../stack_8c.html',1,'']]],
   ['stack_2eh_10',['stack.h',['../stack_8h.html',1,'']]],
-  ['stackvazia_11',['stackVazia',['../stack_8c.html#a0de8cf3d51fdf4c2889a37b12d0a822e',1,'stackVazia(STACK *stack):&#160;stack.c'],['../stack_8h.html#a0de8cf3d51fdf4c2889a37b12d0a822e',1,'stackVazia(STACK *stack):&#160;stack.c']]]
+  ['stackmoedas_11',['stackMoedas',['../moedas_8c.html#a5eb0f0a23e7684b78f624484f9157c03',1,'moedas.c']]],
+  ['stackvazia_12',['stackVazia',['../stack_8c.html#a0de8cf3d51fdf4c2889a37b12d0a822e',1,'stackVazia(STACK *stack):&#160;stack.c'],['../stack_8h.html#a0de8cf3d51fdf4c2889a37b12d0a822e',1,'stackVazia(STACK *stack):&#160;stack.c']]]
 ];
