@@ -1,3 +1,13 @@
+/**
+ * @file input.h
+ * @author daguer
+ * @brief  Define a captura numérica do usuario 
+ * @version 1.0.0
+ * @date 2025-07-20
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
 #ifndef INPUT_H
 #define INPUT_H
 

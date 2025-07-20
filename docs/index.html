@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vending Machine: Main Page</title>
+<title>Vending Machine: Máquina de refrigerante</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -102,10 +102,97 @@ $(function(){initNavTree('index.html',''); initResizable(true); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">Vending Machine Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">Máquina de refrigerante </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p><a class="anchor" id="md__r_e_a_d_m_e"></a></p>
+<h3><a class="anchor" id="autotoc_md1"></a>
+PRG22105 — Programação de Computadores II</h3>
+<p>Professor: João Cláudio Elsen Barcellos, <a href="#" onclick="location.href='mai'+'lto:'+'joa'+'o.'+'bar'+'ce'+'llo'+'s@'+'ifs'+'c.'+'edu'+'.b'+'r'; return false;">joao.<span class="obfuscator">.nosp@m.</span>barc<span class="obfuscator">.nosp@m.</span>ellos<span class="obfuscator">.nosp@m.</span>@ifs<span class="obfuscator">.nosp@m.</span>c.edu<span class="obfuscator">.nosp@m.</span>.br</a> <br  />
+ Estudante: Pedro Henrique Daguer <br  />
+</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Máquina de refrigerantes</h1>
+<p><b>Objetivo e visão geral</b>: Neste projeto propõe-se o desenvolvimento de uma aplicação, executada via terminal, para simular uma máquina de refrigerantes. Esta aplicação fará uso de uma máquina de estados, estruturas de dados (e.g., pilhas, filas, listas simplesmente e duplamente encadeadas) e manipulação de arquivos. <br  />
+</p>
+<p>A máquina de refrigerantes disponibilizará, inicialmente, dois refrigerantes: <b>Pureza</b> e <b>Guaraná Jesus</b>, ambos custando <b>R$ 1.5</b>. O usuário pode inserir moedas de <b>R$1.0</b>, <b>R$0.5</b> ou <b>R$0.25</b>. O sistema deve rastrear apenas o <b>valor total acumulado</b>, sem necessidade de gerenciar, individu￾almente, cada moeda. Moedas inválidas são devolvidas automaticamente e imediatamente. O usuário pode usar a funcionalidade de undo (descrita abaixo) para cancelar a inserção de moedas ou reverter outras ações. O sistema calculará e informará o valor do troco (simplesmente como Troco = ValorInserido - PreçoProduto) automaticamente quando o valor inserido for suficiente e um produto for selecionado. <br  />
+</p>
+<p><b>Requisitos mínimos</b>:</p><ol type="1">
+<li>Máquina de Estados<ul>
+<li>Implementação via switch-case</li>
+<li>Estados obrigatórios<ul>
+<li>menu inicial</li>
+<li>seleção de produtos</li>
+<li>pagamento</li>
+<li>configuração pelo dono da máquina de refrigerantes (e.g., para adicionar propagandas e/ou mudar os produtos que estão disponíveis) <br  />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>User interface (UI)<ul>
+<li>Entrada e saída de dados via terminal</li>
+<li>Atualização “dinâmica” da interface (e.g., por meio do comando clean) <br  />
+</li>
+</ul>
+</li>
+<li>Gerenciamento de propagandas: <br  />
+<ul>
+<li>Propagandas são gerenciadas por meio de fila(s) <br  />
+</li>
+<li>Apresentadas ciclicamente no terminal, a cada 1 min, por exemplo <br  />
+</li>
+</ul>
+</li>
+<li>Estruturas de Dados <br  />
+<ul>
+<li><b>Pilhas</b> para desfazer (undo) últimas ações, incluindo <br  />
+ – Retornar ao estado anterior (e.g., voltar do estado de pagamento para o estado de seleção de produtos) – Desfazer a inserção da última moeda (funcionando como uma tecla de devolução) <br  />
+</li>
+<li><b>Filas</b> para gerenciar as propagandas <br  />
+</li>
+<li><b>Listas Encadeadas</b> <br  />
+<ul>
+<li><b>Lista duplamente encadeada</b> para configuração de produtos: cada nó representará um produto com informações como ID, nome, preço e estoque. Esta estrutura permite ao administrador adicionar, remover e atualizar produtos facilmente <br  />
+</li>
+<li><b>Lista simplesmente encadeada</b> para logs de vendas: cada nó conterá informações sobre uma venda (timestamp, produto, valor pago, troco). Os logs serão carregados ao iniciar o sistema e atualizados durante a operação, mantendo o histórico completo. Considere o uso de arquivos binários para armazenamento eficiente destes dados <br  />
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Menu de Configuração <br  />
+<ul>
+<li>Arquivo de configuração protegido por senha <br  />
+</li>
+<li>Atualização de nome, preço e detalhes dos produtos acessível apenas pelo dono. <br  />
+</li>
+</ul>
+</li>
+<li>Persistência e Logs <br  />
+<ul>
+<li>Logs das vendas armazenados em arquivo <br  />
+</li>
+<li>Recuperação desses arquivos toda vez que esta máquina de refrigerantes é religada <br  />
+</li>
+</ul>
+</li>
+<li>Documentação e versionamento <br  />
+<ul>
+<li>Uso obrigatório do GitHub <br  />
+</li>
+<li>Recomenda-se uso de Doxygen para documentação do código <br  />
+</li>
+</ul>
+</li>
+<li>Funcionalidade adicional <br  />
+<ul>
+<li>Deve-se implementar alguma funcionalidade extra. </li>
+</ul>
+</li>
+</ol>
+</div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
 </div><!-- doc-content -->

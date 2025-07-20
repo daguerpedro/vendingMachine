@@ -1,15 +1,27 @@
+/**
+ * @file list.h
+ * @author daguer
+ * @brief Estrutura de dados do tipo list genérica
+ * @version 1.0.0
+ * @date 2025-07-20
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
 #ifndef _LIST_H
 #define _LIST_H
 
 #include <stdbool.h>
 #include "no.h"
 
-/// @brief Lista duplamente encadeada
+/// @brief Lista duplamente encadeada genérica
 typedef struct LIST
 {
+    /// @brief Início da lista
     NO* inicio;
+    /// @brief Fim da lista
     NO* final;
-
+    /// @brief Tamanho da lista
     int count;
 } LIST;
 

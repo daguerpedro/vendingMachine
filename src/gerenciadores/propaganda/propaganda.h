@@ -1,3 +1,13 @@
+/**
+ * @file propaganda.h
+ * @author daguer
+ * @brief Gerencia as propagandas, buscando em arquivo binário e enfileirando.
+ * @version 1.0.0
+ * @date 2025-07-20
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
 #ifndef _PROPAGANDA_H
 #define _PROPAGANDA_H
 
@@ -15,7 +25,8 @@ void devolverPropaganda(char* propaganda);
 /// @brief Pega a próxima propaganda da fila de propagandas
 /// @return Retorna a propaganda.
 char* pegarPropaganda();
-
+/// @brief Cria o arquivo de propagandas padrão
+/// @return ptr para arquivo.
 FILE *criarArquivoPropagandasPadrao();
 
 /// @brief Mostra propaganda na tela e devolve ao fim da fila

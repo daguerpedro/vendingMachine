@@ -106,24 +106,27 @@ $(function(){initNavTree('moedas_8h_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">moedas.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="moedas_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _MOEDAS_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _MOEDAS_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span></div>
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#a648cd83bbda897da3191104ef790379a">iniciarGerenciadorMoedas</a>();</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#ab8fc76cce574a9ea105aabd231b69edc">limparGerenciadorMoedas</a>();</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#a477695585cfb60e1279a17ba5eaf1fa5">inserirMoeda</a>(<span class="keywordtype">float</span> v);</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">float</span> <a class="code hl_function" href="moedas_8h.html#ae0a722b3843845d0d68d7f207e9039d9">recolherMoeda</a>();</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#a891e8cd6eab4416c1e31707adefcf97e">esvaziarMoedas</a>();</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="amoedas_8h_html_a477695585cfb60e1279a17ba5eaf1fa5"><div class="ttname"><a href="moedas_8h.html#a477695585cfb60e1279a17ba5eaf1fa5">inserirMoeda</a></div><div class="ttdeci">void inserirMoeda(float v)</div><div class="ttdef"><b>Definition</b> moedas.c:20</div></div>
-<div class="ttc" id="amoedas_8h_html_a648cd83bbda897da3191104ef790379a"><div class="ttname"><a href="moedas_8h.html#a648cd83bbda897da3191104ef790379a">iniciarGerenciadorMoedas</a></div><div class="ttdeci">void iniciarGerenciadorMoedas()</div><div class="ttdoc">Inicia o gerenciador de moedas.</div><div class="ttdef"><b>Definition</b> moedas.c:10</div></div>
-<div class="ttc" id="amoedas_8h_html_a891e8cd6eab4416c1e31707adefcf97e"><div class="ttname"><a href="moedas_8h.html#a891e8cd6eab4416c1e31707adefcf97e">esvaziarMoedas</a></div><div class="ttdeci">void esvaziarMoedas()</div><div class="ttdef"><b>Definition</b> moedas.c:37</div></div>
-<div class="ttc" id="amoedas_8h_html_ab8fc76cce574a9ea105aabd231b69edc"><div class="ttname"><a href="moedas_8h.html#ab8fc76cce574a9ea105aabd231b69edc">limparGerenciadorMoedas</a></div><div class="ttdeci">void limparGerenciadorMoedas()</div><div class="ttdoc">Finaliza e limpa as memórias utilizadas pelo gerenciador.</div><div class="ttdef"><b>Definition</b> moedas.c:15</div></div>
-<div class="ttc" id="amoedas_8h_html_ae0a722b3843845d0d68d7f207e9039d9"><div class="ttname"><a href="moedas_8h.html#ae0a722b3843845d0d68d7f207e9039d9">recolherMoeda</a></div><div class="ttdeci">float recolherMoeda()</div><div class="ttdef"><b>Definition</b> moedas.c:27</div></div>
+<a href="moedas_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#ifndef _MOEDAS_H</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#define _MOEDAS_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="moedas_8h.html#a648cd83bbda897da3191104ef790379a">   17</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#a648cd83bbda897da3191104ef790379a">iniciarGerenciadorMoedas</a>();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="moedas_8h.html#ab8fc76cce574a9ea105aabd231b69edc">   19</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#ab8fc76cce574a9ea105aabd231b69edc">limparGerenciadorMoedas</a>();</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="moedas_8h.html#a477695585cfb60e1279a17ba5eaf1fa5">   23</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#a477695585cfb60e1279a17ba5eaf1fa5">inserirMoeda</a>(<span class="keywordtype">float</span> v);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="moedas_8h.html#ae0a722b3843845d0d68d7f207e9039d9">   27</a></span><span class="keywordtype">float</span> <a class="code hl_function" href="moedas_8h.html#ae0a722b3843845d0d68d7f207e9039d9">recolherMoeda</a>();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="moedas_8h.html#a891e8cd6eab4416c1e31707adefcf97e">   30</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="moedas_8h.html#a891e8cd6eab4416c1e31707adefcf97e">esvaziarMoedas</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="amoedas_8h_html_a477695585cfb60e1279a17ba5eaf1fa5"><div class="ttname"><a href="moedas_8h.html#a477695585cfb60e1279a17ba5eaf1fa5">inserirMoeda</a></div><div class="ttdeci">void inserirMoeda(float v)</div><div class="ttdoc">Insere moeda na máquina.</div></div>
+<div class="ttc" id="amoedas_8h_html_a648cd83bbda897da3191104ef790379a"><div class="ttname"><a href="moedas_8h.html#a648cd83bbda897da3191104ef790379a">iniciarGerenciadorMoedas</a></div><div class="ttdeci">void iniciarGerenciadorMoedas()</div><div class="ttdoc">Inicia o gerenciador de moedas.</div></div>
+<div class="ttc" id="amoedas_8h_html_a891e8cd6eab4416c1e31707adefcf97e"><div class="ttname"><a href="moedas_8h.html#a891e8cd6eab4416c1e31707adefcf97e">esvaziarMoedas</a></div><div class="ttdeci">void esvaziarMoedas()</div><div class="ttdoc">Remove todas as moedas inseridas.</div></div>
+<div class="ttc" id="amoedas_8h_html_ab8fc76cce574a9ea105aabd231b69edc"><div class="ttname"><a href="moedas_8h.html#ab8fc76cce574a9ea105aabd231b69edc">limparGerenciadorMoedas</a></div><div class="ttdeci">void limparGerenciadorMoedas()</div><div class="ttdoc">Finaliza e limpa as memórias utilizadas pelo gerenciador.</div></div>
+<div class="ttc" id="amoedas_8h_html_ae0a722b3843845d0d68d7f207e9039d9"><div class="ttname"><a href="moedas_8h.html#ae0a722b3843845d0d68d7f207e9039d9">recolherMoeda</a></div><div class="ttdeci">float recolherMoeda()</div><div class="ttdoc">Recolhe de volta a última moeda inserida.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

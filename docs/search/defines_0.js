@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug_0',['DEBUG',['../settings_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'settings.h']]]
+  ['windows_0',['WINDOWS',['../main_8c.html#a987b73d7cc6da72732af75c5d7872d29',1,'main.c']]]
 ];

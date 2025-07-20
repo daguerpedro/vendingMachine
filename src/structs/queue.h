@@ -1,10 +1,23 @@
+/**
+ * @file queue.h
+ * @author daguer
+ * @brief Estrutura de dados do tipo queue genérica
+ * @version 1.0.0
+ * @date 2025-07-20
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
+
 #include <stdbool.h>
 #include <no.h>
 
-/// @brief Queue/Fila
+/// @brief Queue/Fila genérica
 typedef struct QUEUE
 {
+    /// @brief Primeiro da fila
     NO *primeiro;
+    /// @brief Último da fila
     NO *ultimo;
 } QUEUE;
 

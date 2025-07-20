@@ -25,6 +25,7 @@
 var NAVTREE =
 [
   [ "Vending Machine", "index.html", [
+    [ "Máquina de refrigerante", "index.html", "index" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -49,7 +50,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"admin_8c.html"
+"admin_8h.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

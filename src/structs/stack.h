@@ -1,9 +1,20 @@
+/**
+ * @file stack.h
+ * @author daguer
+ * @brief Estrutura de dados do tipo stack genérica
+ * @version 1.0.0
+ * @date 2025-07-20
+ * 
+ * @copyright Copyright (c) 2025
+ * 
+ */
 #include <stdbool.h>
 #include <no.h>
 
-/// @brief Stack
+/// @brief Stack genérica
 typedef struct STACK
 {
+    /// @brief Topo da stack
     NO *topo;
 } STACK;
 

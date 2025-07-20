@@ -106,42 +106,45 @@ $(function(){initNavTree('admin_8h_source.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">admin.h</div></div>
 </div><!--header-->
 <div class="contents">
-<a href="admin_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef _ADMIN_H</span></div>
-<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define _ADMIN_H</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &lt;<a class="code" href="produtos_8h.html">produtos.h</a>&gt;</span></div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">    7</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="struct_m_a_c_h_i_n_e___i_n_f_o.html#a8938b3deaaad27ba989063ad143dc2ab">    9</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_m_a_c_h_i_n_e___i_n_f_o.html#a8938b3deaaad27ba989063ad143dc2ab">greetings</a>[100];</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="admin_8h.html#aa7d9531cdfbc9e9248243ece03c611f5">   10</a></span>} <a class="code hl_struct" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a>;</div>
-</div>
+<a href="admin_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a> <a class="code hl_variable" href="admin_8c.html#a8b2efb7f8eafe2646a3590621e983509">machineInfo</a>;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">//TODO: LOGS</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="admin_8h.html#af8d41a8227e12bb092c3619b89f568e4">criarLogVenda</a>(<a class="code hl_struct" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> produtoVendido);</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keywordtype">void</span> <a class="code hl_function" href="admin_8h.html#a495a6e8cd6de2b29a73fc0803e37e3ec">iniciarGerenciadorAdmin</a>();</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="admin_8h.html#a3fc07cb615697fb8062e5a56204a5ecc">limparGerenciadorAdmin</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>FILE *<a class="code hl_function" href="admin_8h.html#a591f7595f854e8f05ab490f7768b8e77">criarArquivoAdminPadrao</a>();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>FILE *<a class="code hl_function" href="admin_8h.html#af4ae6e1a3eb95b3974842f9fe7105a8b">criarArquivoLogPadrao</a>();</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#ifndef _ADMIN_H</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define _ADMIN_H</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;<a class="code" href="produtos_8h.html">produtos.h</a>&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span></div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">   19</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>{</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="struct_m_a_c_h_i_n_e___i_n_f_o.html#a8938b3deaaad27ba989063ad143dc2ab">   21</a></span>    <span class="keywordtype">char</span> <a class="code hl_variable" href="struct_m_a_c_h_i_n_e___i_n_f_o.html#a8938b3deaaad27ba989063ad143dc2ab">greetings</a>[100];</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="admin_8h.html#aa7d9531cdfbc9e9248243ece03c611f5">   22</a></span>} <a class="code hl_struct" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a>;</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">extern</span> <a class="code hl_struct" href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a> <a class="code hl_variable" href="admin_8h.html#a8b2efb7f8eafe2646a3590621e983509">machineInfo</a>;</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
-<div class="ttc" id="aadmin_8c_html_a8b2efb7f8eafe2646a3590621e983509"><div class="ttname"><a href="admin_8c.html#a8b2efb7f8eafe2646a3590621e983509">machineInfo</a></div><div class="ttdeci">MACHINE_INFO machineInfo</div><div class="ttdef"><b>Definition</b> admin.c:6</div></div>
-<div class="ttc" id="aadmin_8h_html_a3fc07cb615697fb8062e5a56204a5ecc"><div class="ttname"><a href="admin_8h.html#a3fc07cb615697fb8062e5a56204a5ecc">limparGerenciadorAdmin</a></div><div class="ttdeci">void limparGerenciadorAdmin()</div><div class="ttdoc">Limpa o gerenciador de admin.</div><div class="ttdef"><b>Definition</b> admin.c:25</div></div>
-<div class="ttc" id="aadmin_8h_html_a495a6e8cd6de2b29a73fc0803e37e3ec"><div class="ttname"><a href="admin_8h.html#a495a6e8cd6de2b29a73fc0803e37e3ec">iniciarGerenciadorAdmin</a></div><div class="ttdeci">void iniciarGerenciadorAdmin()</div><div class="ttdoc">Inicia o gerenciador de admin.</div><div class="ttdef"><b>Definition</b> admin.c:8</div></div>
-<div class="ttc" id="aadmin_8h_html_a591f7595f854e8f05ab490f7768b8e77"><div class="ttname"><a href="admin_8h.html#a591f7595f854e8f05ab490f7768b8e77">criarArquivoAdminPadrao</a></div><div class="ttdeci">FILE * criarArquivoAdminPadrao()</div><div class="ttdef"><b>Definition</b> admin.c:44</div></div>
-<div class="ttc" id="aadmin_8h_html_af4ae6e1a3eb95b3974842f9fe7105a8b"><div class="ttname"><a href="admin_8h.html#af4ae6e1a3eb95b3974842f9fe7105a8b">criarArquivoLogPadrao</a></div><div class="ttdeci">FILE * criarArquivoLogPadrao()</div><div class="ttdef"><b>Definition</b> admin.c:29</div></div>
-<div class="ttc" id="aadmin_8h_html_af8d41a8227e12bb092c3619b89f568e4"><div class="ttname"><a href="admin_8h.html#af8d41a8227e12bb092c3619b89f568e4">criarLogVenda</a></div><div class="ttdeci">void criarLogVenda(PRODUTO_HEADER produtoVendido)</div><div class="ttdef"><b>Definition</b> admin.c:65</div></div>
-<div class="ttc" id="aprodutos_8h_html"><div class="ttname"><a href="produtos_8h.html">produtos.h</a></div></div>
-<div class="ttc" id="astruct_m_a_c_h_i_n_e___i_n_f_o_html"><div class="ttname"><a href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a></div><div class="ttdef"><b>Definition</b> admin.h:8</div></div>
-<div class="ttc" id="astruct_m_a_c_h_i_n_e___i_n_f_o_html_a8938b3deaaad27ba989063ad143dc2ab"><div class="ttname"><a href="struct_m_a_c_h_i_n_e___i_n_f_o.html#a8938b3deaaad27ba989063ad143dc2ab">MACHINE_INFO::greetings</a></div><div class="ttdeci">char greetings[100]</div><div class="ttdef"><b>Definition</b> admin.h:9</div></div>
-<div class="ttc" id="astruct_p_r_o_d_u_t_o___h_e_a_d_e_r_html"><div class="ttname"><a href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a></div><div class="ttdoc">Estrutura para produtos.</div><div class="ttdef"><b>Definition</b> produtos.h:9</div></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="comment">//TODO: LOGS, salva os logs de venda na memoria e quando a maquina vai fechar ou vendas &gt; 3, escreve nos arquivos;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="admin_8h.html#af8d41a8227e12bb092c3619b89f568e4">   27</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="admin_8h.html#af8d41a8227e12bb092c3619b89f568e4">criarLogVenda</a>(<a class="code hl_struct" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> produtoVendido);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="admin_8h.html#a495a6e8cd6de2b29a73fc0803e37e3ec">   30</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="admin_8h.html#a495a6e8cd6de2b29a73fc0803e37e3ec">iniciarGerenciadorAdmin</a>();</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="admin_8h.html#a3fc07cb615697fb8062e5a56204a5ecc">   33</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="admin_8h.html#a3fc07cb615697fb8062e5a56204a5ecc">limparGerenciadorAdmin</a>();</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="admin_8h.html#a591f7595f854e8f05ab490f7768b8e77">   37</a></span>FILE *<a class="code hl_function" href="admin_8h.html#a591f7595f854e8f05ab490f7768b8e77">criarArquivoAdminPadrao</a>();</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="admin_8h.html#af4ae6e1a3eb95b3974842f9fe7105a8b">   41</a></span>FILE *<a class="code hl_function" href="admin_8h.html#af4ae6e1a3eb95b3974842f9fe7105a8b">criarArquivoLogPadrao</a>();</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aadmin_8h_html_a3fc07cb615697fb8062e5a56204a5ecc"><div class="ttname"><a href="admin_8h.html#a3fc07cb615697fb8062e5a56204a5ecc">limparGerenciadorAdmin</a></div><div class="ttdeci">void limparGerenciadorAdmin()</div><div class="ttdoc">Limpa o gerenciador de admin.</div></div>
+<div class="ttc" id="aadmin_8h_html_a495a6e8cd6de2b29a73fc0803e37e3ec"><div class="ttname"><a href="admin_8h.html#a495a6e8cd6de2b29a73fc0803e37e3ec">iniciarGerenciadorAdmin</a></div><div class="ttdeci">void iniciarGerenciadorAdmin()</div><div class="ttdoc">Inicia o gerenciador de admin.</div></div>
+<div class="ttc" id="aadmin_8h_html_a591f7595f854e8f05ab490f7768b8e77"><div class="ttname"><a href="admin_8h.html#a591f7595f854e8f05ab490f7768b8e77">criarArquivoAdminPadrao</a></div><div class="ttdeci">FILE * criarArquivoAdminPadrao()</div><div class="ttdoc">Cria arquivo padrão.</div></div>
+<div class="ttc" id="aadmin_8h_html_a8b2efb7f8eafe2646a3590621e983509"><div class="ttname"><a href="admin_8h.html#a8b2efb7f8eafe2646a3590621e983509">machineInfo</a></div><div class="ttdeci">MACHINE_INFO machineInfo</div></div>
+<div class="ttc" id="aadmin_8h_html_af4ae6e1a3eb95b3974842f9fe7105a8b"><div class="ttname"><a href="admin_8h.html#af4ae6e1a3eb95b3974842f9fe7105a8b">criarArquivoLogPadrao</a></div><div class="ttdeci">FILE * criarArquivoLogPadrao()</div><div class="ttdoc">Cria arquivo padrão.</div></div>
+<div class="ttc" id="aadmin_8h_html_af8d41a8227e12bb092c3619b89f568e4"><div class="ttname"><a href="admin_8h.html#af8d41a8227e12bb092c3619b89f568e4">criarLogVenda</a></div><div class="ttdeci">void criarLogVenda(PRODUTO_HEADER produtoVendido)</div></div>
+<div class="ttc" id="aprodutos_8h_html"><div class="ttname"><a href="produtos_8h.html">produtos.h</a></div><div class="ttdoc">Gerencia os produtos, manipula em arquivo binário e cria lista de produtos na memória.</div></div>
+<div class="ttc" id="astruct_m_a_c_h_i_n_e___i_n_f_o_html"><div class="ttname"><a href="struct_m_a_c_h_i_n_e___i_n_f_o.html">MACHINE_INFO</a></div><div class="ttdoc">Carrega as informações da máquina que são exibidas no menu inicial.</div><div class="ttdef"><b>Definition</b> admin.h:20</div></div>
+<div class="ttc" id="astruct_m_a_c_h_i_n_e___i_n_f_o_html_a8938b3deaaad27ba989063ad143dc2ab"><div class="ttname"><a href="struct_m_a_c_h_i_n_e___i_n_f_o.html#a8938b3deaaad27ba989063ad143dc2ab">MACHINE_INFO::greetings</a></div><div class="ttdeci">char greetings[100]</div><div class="ttdef"><b>Definition</b> admin.h:21</div></div>
+<div class="ttc" id="astruct_p_r_o_d_u_t_o___h_e_a_d_e_r_html"><div class="ttname"><a href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a></div><div class="ttdoc">Estrutura para produtos.</div><div class="ttdef"><b>Definition</b> produtos.h:19</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
