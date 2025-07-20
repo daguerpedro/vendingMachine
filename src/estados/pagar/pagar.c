@@ -7,38 +7,23 @@
 
 #include <gerenciadores/produtos/produtos.h>
 #include <gerenciadores/moedas/moedas.h>
+#include <propaganda.h>
 
 float saldo = 0;
-
-void clear()
-{
-    system("clear || cls");
-    fflush(stdout);
-}
-
-void pause()
-{
-    system("pause");
-}
 
 void pegarInfoProduto()
 {
     PRODUTO_HEADER selecionado = produtoSelecionado();
 
     printf("> %s custa R$ %0.2f\n", selecionado.name, selecionado.preço);
-    printf("> Seu saldo: %0.2f\n\n", saldo);
-}
-
-void mostrarMoedas()
-{
-    printf("[MOEDAS] (1) R$ 0.25 (2) R$ 0.50 (3) R$ 1.00\n");
+    printf("> Seu saldo R$ %0.2f\n\n", saldo);
 }
 
 void informacoes()
 {
     pegarInfoProduto();
-    mostrarMoedas();
-    printf("[INSIRA MOEDAS | 4: DESFAZER]: \n");
+    printf("[INSIRA MOEDAS | 4: DESFAZER]: \n\n");
+    printf(" (1) R$ 0.25 \n (2) R$ 0.50 \n (3) R$ 1.00\n");
 }
 
 void darTroco()
@@ -50,7 +35,7 @@ void darTroco()
         if (saldo >= produtoSelecionado().preço)
             troco = saldo - produtoSelecionado().preço;
 
-        printf("[TROCO] Seu troco: %0.2f\n", troco);
+        printf("> Seu troco R$ %0.2f\n\n", troco);
     }
 
     saldo = 0;
@@ -61,6 +46,7 @@ void darTroco()
 /// @param result Variavel que armazenara o resultado
 void coletarMoedas(RESULTADO_ESTADO *result)
 {
+    printf("\n");
     int entrada = captarEntrada(true);
     switch (entrada)
     {
@@ -88,7 +74,7 @@ void coletarMoedas(RESULTADO_ESTADO *result)
             break;
 
         float recolher = recolherMoeda();
-        printf("[DEVOLUÇÃO] %0.2f\n", recolher);
+        printf("\n> Pegue sua moeda de volta R$ %0.2f\n\n", recolher);
         saldo -= recolher;
         pause();
 
@@ -101,7 +87,8 @@ void coletarMoedas(RESULTADO_ESTADO *result)
     if (saldo >= produtoSelecionado().preço)
     {
         //TODO: TOCAR SOM
-        printf("> Aproveite seu refri!\n");
+        printf("\n> Aproveite seu refri!\n");
+        venderProduto();
         *result = PROXIMO;
         return;
     }

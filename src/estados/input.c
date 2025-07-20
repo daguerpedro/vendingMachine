@@ -2,6 +2,7 @@
 
 #include <stdio.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 int captarEntrada(bool mostrarNav)
 {
@@ -19,4 +20,15 @@ int captarEntrada(bool mostrarNav)
         fflush(stdin);
     } while (code <= 0);
     return input;
+}
+
+void clear()
+{
+    system("clear || cls");
+    fflush(stdout);
+}
+
+void pause()
+{
+    system("pause");
 }

@@ -12,6 +12,7 @@
 #ifndef _ADMIN_H
 #define _ADMIN_H
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <produtos.h>
 
@@ -23,7 +24,8 @@ typedef struct MACHINE_INFO
 
 extern MACHINE_INFO machineInfo;
 
-//TODO: LOGS, salva os logs de venda na memoria e quando a maquina vai fechar ou vendas > 3, escreve nos arquivos;
+/// @brief Cria um log de produto vendido
+/// @param produtoVendido Ref/Cópia do produto.
 void criarLogVenda(PRODUTO_HEADER produtoVendido);
 
 /// @brief Inicia o gerenciador de admin
@@ -32,12 +34,21 @@ void iniciarGerenciadorAdmin();
 /// @brief Limpa o gerenciador de admin
 void limparGerenciadorAdmin();
 
+/// @brief Carrega o arquivo de configuração.
+void carregarArquivoAdmin();
+
+/// @brief Carrega o arquivo de logs.
+void carregarArquivoLog();
+
+/// @brief Salva os logs 
+/// @param force true = salva na hora | false = salva se count da lista de logs >= 3
+void salvarLogs(bool force);
+
 /// @brief Cria arquivo padrão
 /// @return Ptr para arquivo.
 FILE *criarArquivoAdminPadrao();
 
-/// @brief Cria arquivo padrão
-/// @return Ptr para arquivo.
-FILE *criarArquivoLogPadrao();
+/// @brief Mostra todos os logs.
+void imprimirLogs();
 
 #endif

@@ -12,6 +12,8 @@
 /// @param result Variavel que armazenara o resultado
 void selecionar(RESULTADO_ESTADO* result)
 {
+    printf("\n");
+    
     int entrada = captarEntrada(true);
     switch (entrada)
     {
@@ -21,10 +23,7 @@ void selecionar(RESULTADO_ESTADO* result)
     case 0:
         *result = VOLTAR;
         return;
-    case -9:
-        *result = MENU_ADM;
-        return;
-    default: // Se nao queremos sair nem ir para o menu de configuração, vamos verificar se o produto é valido
+    default: // Vamos verificar se o produto é valido
         break;
     }
 

@@ -6,6 +6,7 @@ var list_8h =
     [ "indexOf", "list_8h.html#a6b382b8dcca98e92c49cb6fd270b4f37", null ],
     [ "iniciarList", "list_8h.html#a75881d7fa3b73bd961dc3a061b9b7761", null ],
     [ "insertList", "list_8h.html#a294b4ad114f4d17404b2ec44d64e97c1", null ],
+    [ "iterarLista", "list_8h.html#ae4378d5f4040117c114b65b62f43e213", null ],
     [ "limparList", "list_8h.html#a70855243c9797b6e28a121a6b5d41d47", null ],
     [ "listVazia", "list_8h.html#a9c3c7679991858e370863a018ca27c27", null ],
     [ "printList", "list_8h.html#aecdffaf7299d3129d149b4c8c63dd59e", null ],

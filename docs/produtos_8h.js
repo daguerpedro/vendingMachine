@@ -10,5 +10,6 @@ var produtos_8h =
     [ "listarProdutos", "produtos_8h.html#adbf4fdb8c5c275b1f95cf633868bfb03", null ],
     [ "produtoSelecionado", "produtos_8h.html#a1307ac949adfa53cfff36a83a08481e8", null ],
     [ "produtoValido", "produtos_8h.html#a197cf1480a60b053049a9ebdde9deb30", null ],
-    [ "selecionaProduto", "produtos_8h.html#abc5281292e7f311442762df4895dc343", null ]
+    [ "selecionaProduto", "produtos_8h.html#abc5281292e7f311442762df4895dc343", null ],
+    [ "venderProduto", "produtos_8h.html#a11ccddf40be41143b5abeb704db938e8", null ]
 ];

@@ -66,4 +66,7 @@ FILE *criarArquivoProdutosPadrao();
 /// @param database Ponteiro para o arquivo de produtos
 /// @return Ponteiro para estrutura do produto
 PRODUTO_HEADER* criarProduto(char* name, float preço, int estoque, bool naVitrine, FILE* databse);
+
+/// @brief Vende o produto selecionado, diminui do estoque e cria log de venda.
+void venderProduto();
 #endif

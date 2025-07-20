@@ -114,7 +114,8 @@ $(function(){initNavTree('admin_8h.html',''); initResizable(true); });
 
 <p>Gerenciador de configurações da máquina.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;stdbool.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;<a class="el" href="produtos_8h_source.html">produtos.h</a>&gt;</code><br />
 </div>
 <p><a href="admin_8h_source.html">Go to the source code of this file.</a></p>
@@ -134,6 +135,7 @@ Typedefs</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:af8d41a8227e12bb092c3619b89f568e4" id="r_af8d41a8227e12bb092c3619b89f568e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af8d41a8227e12bb092c3619b89f568e4">criarLogVenda</a> (<a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> produtoVendido)</td></tr>
+<tr class="memdesc:af8d41a8227e12bb092c3619b89f568e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um log de produto vendido.  <br /></td></tr>
 <tr class="separator:af8d41a8227e12bb092c3619b89f568e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a495a6e8cd6de2b29a73fc0803e37e3ec" id="r_a495a6e8cd6de2b29a73fc0803e37e3ec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a495a6e8cd6de2b29a73fc0803e37e3ec">iniciarGerenciadorAdmin</a> ()</td></tr>
 <tr class="memdesc:a495a6e8cd6de2b29a73fc0803e37e3ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicia o gerenciador de admin.  <br /></td></tr>
@@ -141,12 +143,21 @@ Functions</h2></td></tr>
 <tr class="memitem:a3fc07cb615697fb8062e5a56204a5ecc" id="r_a3fc07cb615697fb8062e5a56204a5ecc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fc07cb615697fb8062e5a56204a5ecc">limparGerenciadorAdmin</a> ()</td></tr>
 <tr class="memdesc:a3fc07cb615697fb8062e5a56204a5ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Limpa o gerenciador de admin.  <br /></td></tr>
 <tr class="separator:a3fc07cb615697fb8062e5a56204a5ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62413a85f755185aedf007b6c338b632" id="r_a62413a85f755185aedf007b6c338b632"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a62413a85f755185aedf007b6c338b632">carregarArquivoAdmin</a> ()</td></tr>
+<tr class="memdesc:a62413a85f755185aedf007b6c338b632"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega o arquivo de configuração.  <br /></td></tr>
+<tr class="separator:a62413a85f755185aedf007b6c338b632"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c1ac4d939ae4c925954128215ab6948" id="r_a3c1ac4d939ae4c925954128215ab6948"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3c1ac4d939ae4c925954128215ab6948">carregarArquivoLog</a> ()</td></tr>
+<tr class="memdesc:a3c1ac4d939ae4c925954128215ab6948"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega o arquivo de logs.  <br /></td></tr>
+<tr class="separator:a3c1ac4d939ae4c925954128215ab6948"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa46ef07f71ef18012b0dac8f8475fbab" id="r_aa46ef07f71ef18012b0dac8f8475fbab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa46ef07f71ef18012b0dac8f8475fbab">salvarLogs</a> (bool force)</td></tr>
+<tr class="memdesc:aa46ef07f71ef18012b0dac8f8475fbab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Salva os logs.  <br /></td></tr>
+<tr class="separator:aa46ef07f71ef18012b0dac8f8475fbab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a591f7595f854e8f05ab490f7768b8e77" id="r_a591f7595f854e8f05ab490f7768b8e77"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a591f7595f854e8f05ab490f7768b8e77">criarArquivoAdminPadrao</a> ()</td></tr>
 <tr class="memdesc:a591f7595f854e8f05ab490f7768b8e77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria arquivo padrão.  <br /></td></tr>
 <tr class="separator:a591f7595f854e8f05ab490f7768b8e77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4ae6e1a3eb95b3974842f9fe7105a8b" id="r_af4ae6e1a3eb95b3974842f9fe7105a8b"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4ae6e1a3eb95b3974842f9fe7105a8b">criarArquivoLogPadrao</a> ()</td></tr>
-<tr class="memdesc:af4ae6e1a3eb95b3974842f9fe7105a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria arquivo padrão.  <br /></td></tr>
-<tr class="separator:af4ae6e1a3eb95b3974842f9fe7105a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d4ca5c9d036295fe5db3d802d363745" id="r_a4d4ca5c9d036295fe5db3d802d363745"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4d4ca5c9d036295fe5db3d802d363745">imprimirLogs</a> ()</td></tr>
+<tr class="memdesc:a4d4ca5c9d036295fe5db3d802d363745"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mostra todos os logs.  <br /></td></tr>
+<tr class="separator:a4d4ca5c9d036295fe5db3d802d363745"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -177,6 +188,44 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="a62413a85f755185aedf007b6c338b632" name="a62413a85f755185aedf007b6c338b632"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62413a85f755185aedf007b6c338b632">&#9670;&#160;</a></span>carregarArquivoAdmin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void carregarArquivoAdmin </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carrega o arquivo de configuração. </p>
+
+</div>
+</div>
+<a id="a3c1ac4d939ae4c925954128215ab6948" name="a3c1ac4d939ae4c925954128215ab6948"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c1ac4d939ae4c925954128215ab6948">&#9670;&#160;</a></span>carregarArquivoLog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void carregarArquivoLog </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Carrega o arquivo de logs. </p>
+
+</div>
+</div>
 <a id="a591f7595f854e8f05ab490f7768b8e77" name="a591f7595f854e8f05ab490f7768b8e77"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a591f7595f854e8f05ab490f7768b8e77">&#9670;&#160;</a></span>criarArquivoAdminPadrao()</h2>
 
@@ -185,26 +234,6 @@ Variables</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">FILE * criarArquivoAdminPadrao </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Cria arquivo padrão. </p>
-<dl class="section return"><dt>Returns</dt><dd>Ptr para arquivo. </dd></dl>
-
-</div>
-</div>
-<a id="af4ae6e1a3eb95b3974842f9fe7105a8b" name="af4ae6e1a3eb95b3974842f9fe7105a8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4ae6e1a3eb95b3974842f9fe7105a8b">&#9670;&#160;</a></span>criarArquivoLogPadrao()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">FILE * criarArquivoLogPadrao </td>
           <td>(</td>
           <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
           <td></td>
@@ -231,6 +260,33 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Cria um log de produto vendido. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">produtoVendido</td><td>Ref/Cópia do produto. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4d4ca5c9d036295fe5db3d802d363745" name="a4d4ca5c9d036295fe5db3d802d363745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d4ca5c9d036295fe5db3d802d363745">&#9670;&#160;</a></span>imprimirLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void imprimirLogs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mostra todos os logs. </p>
 
 </div>
 </div>
@@ -269,6 +325,31 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Limpa o gerenciador de admin. </p>
+
+</div>
+</div>
+<a id="aa46ef07f71ef18012b0dac8f8475fbab" name="aa46ef07f71ef18012b0dac8f8475fbab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa46ef07f71ef18012b0dac8f8475fbab">&#9670;&#160;</a></span>salvarLogs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void salvarLogs </td>
+          <td>(</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>force</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Salva os logs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">force</td><td>true = salva na hora | false = salva se count da lista de logs &gt;= 3 </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

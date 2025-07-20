@@ -32,7 +32,7 @@ bool listVazia(LIST *list)
 void pushList(LIST *list, void *data)
 {
     NO *novo = malloc(sizeof(NO));
-    if(novo == NULL)
+    if (novo == NULL)
     {
         printf("[ERRO] Falha ao alocar elemento para lista.\n");
         return;
@@ -192,4 +192,17 @@ int indexOf(LIST *list, void *data)
     }
 
     return i;
+}
+
+void iterarLista(LIST *list, void (*callback)(void *valor))
+{
+    if (listVazia(list) || callback == NULL)
+        return;
+
+    NO *atual = list->inicio;
+    while (atual)
+    {
+        callback(atual->valor);
+        atual = atual->proximo;
+    }
 }

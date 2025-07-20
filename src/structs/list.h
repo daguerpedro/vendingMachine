@@ -60,5 +60,8 @@ void printList(LIST* list);
 /// @param data Valor
 /// @return numero/posicao na lista
 int indexOf(LIST* list, void*data);
-
+/// @brief Itera por todos elementos da lista executando callback e passando o valor do elemento atual como argumento
+/// @param list ref para lista
+/// @param callback função de callback.
+void iterarLista(LIST *list, void (*callback)(void *valor));
 #endif

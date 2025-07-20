@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
+#include <admin.h>
 
 LIST produtosLista;
 
@@ -31,7 +32,7 @@ void listarProdutos()
         PRODUTO_HEADER produto = *(PRODUTO_HEADER *)temp->valor;
         if (produto.naVitrine)
         {
-            printf("(%02i) %s R$ %0.2f [%01i]\n", indexOf(&produtosLista, temp->valor) + 1, produto.name, produto.preço, produto.estoque);
+            printf("(%02i) %s R$ %0.2f [x%01i]\n", indexOf(&produtosLista, temp->valor) + 1, produto.name, produto.preço, produto.estoque);
         }
         temp = temp->proximo;
     }
@@ -157,4 +158,12 @@ void selecionaProduto(int i)
 PRODUTO_HEADER produtoSelecionado()
 {
     return *selecionado;
+}
+
+void venderProduto()
+{
+    selecionado->estoque--;
+    //TODO: ATUALIZAR ARQUIVO DE PRODUTOS 
+    
+    criarLogVenda(*selecionado);
 }

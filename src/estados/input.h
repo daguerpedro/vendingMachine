@@ -15,5 +15,8 @@
 /// @brief Captura a entrada numérica do usuario 
 /// @param mostrarNav Mostrar [-1 sair | 0 voltar]
 int captarEntrada(bool mostrarNav);
-
+/// @brief Limpa tela.
+void clear();
+/// @brief Pausa tela.
+void pause();
 #endif
