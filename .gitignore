@@ -7,3 +7,5 @@
 **.exe
 .vscode/launch.json
 projeto.pdf
+rel/**
+rel/*

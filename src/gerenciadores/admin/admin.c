@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <list.h>
 #include <time.h>
+#include <produtos.h>
 
 MACHINE_INFO machineInfo;
 LIST logList;
@@ -53,6 +54,20 @@ void limparGerenciadorAdmin()
 {
     salvarLogs(true);
     limparList(&logList);
+}
+
+void atualizarArquivoAdmin()
+{
+    FILE *file = fopen("config.bin", "wb+");
+    if (file != NULL)
+    {
+        fwrite(&machineInfo, sizeof(MACHINE_INFO), 1, file);
+        fclose(file);
+    }
+    else
+    {
+        printf("[ERRO] Falha ao sobrescrever arquivo configuração.\n");
+    }
 }
 
 FILE *criarArquivoAdminPadrao()

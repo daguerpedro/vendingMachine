@@ -86,7 +86,6 @@ void coletarMoedas(RESULTADO_ESTADO *result)
 
     if (saldo >= produtoSelecionado().preço)
     {
-        //TODO: TOCAR SOM
         printf("\n> Aproveite seu refri!\n");
         venderProduto();
         *result = PROXIMO;
@@ -95,6 +94,7 @@ void coletarMoedas(RESULTADO_ESTADO *result)
     else
     {
         clear();
+        mostrarPropaganda();
         informacoes();
         coletarMoedas(result);
     }

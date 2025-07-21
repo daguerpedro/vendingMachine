@@ -92,7 +92,7 @@ void processarEstados(STACK *stack, ESTADO *estadoAtual)
         system("clear || cls");
         fflush(stdout);
 
-        if(*estadoAtual != INICIAL)
+        if(*estadoAtual != INICIAL && *estadoAtual != CONFIGURAR)
             mostrarPropaganda();
                 
         switch (*estadoAtual)

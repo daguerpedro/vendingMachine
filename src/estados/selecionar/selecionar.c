@@ -40,7 +40,7 @@ void selecionar(RESULTADO_ESTADO* result)
 RESULTADO_ESTADO estadoSelecionar()
 {
     RESULTADO_ESTADO res;
-    listarProdutos();
+    listarProdutos(false);
     selecionar(&res);
     return res;
 }

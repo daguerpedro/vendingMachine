@@ -51,4 +51,6 @@ FILE *criarArquivoAdminPadrao();
 /// @brief Mostra todos os logs.
 void imprimirLogs();
 
+/// @brief Atualiza o arquivo admin
+void atualizarArquivoAdmin();
 #endif

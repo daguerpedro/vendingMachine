@@ -39,12 +39,18 @@ void limparGerenciadorProdutos();
 void carregarProdutos();
 
 /// @brief Lista todos os produtos
-void listarProdutos();
+/// @param showAdminInfo Exibe informações extras do produto junto da lista.
+void listarProdutos(bool showAdminInfo);
 
 /// @brief Verifica se um produto é valido
 /// @param i numero equivalente na lista
 /// @return true se valido
 bool produtoValido(int i);
+
+/// @brief Verifica se um produto existe
+/// @param i numero equivalente na lista
+/// @return true se existe
+bool produtoExiste(int i);
 
 /// @brief Seleciona um produto.
 /// @param i Index do produto.
@@ -63,10 +69,18 @@ FILE *criarArquivoProdutosPadrao();
 /// @param preço Preço do produto
 /// @param estoque Valor em estoque
 /// @param ativo Está ativo para listagem
-/// @param database Ponteiro para o arquivo de produtos
 /// @return Ponteiro para estrutura do produto
-PRODUTO_HEADER* criarProduto(char* name, float preço, int estoque, bool naVitrine, FILE* databse);
+PRODUTO_HEADER* criarProduto(char* name, float preço, int estoque, bool naVitrine);
 
 /// @brief Vende o produto selecionado, diminui do estoque e cria log de venda.
 void venderProduto();
+
+/// @brief Atualizar info do produto e salva no arquivo
+/// @param i Idx produto na lista.
+void atualizarProduto(int i);
+
+/// @brief Pega o ptr para um produto
+/// @param i Idx do produto na lista.
+/// @return Ptr
+PRODUTO_HEADER *getProductOnList(int i);
 #endif
