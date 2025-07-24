@@ -24,7 +24,8 @@ void editarPaginaInicial()
             c = getchar();
         } while (c == ' ' || c == '\t' || c == '\n');
 
-        if (c == 'n' || c == 'N') {
+        if (c == 'n' || c == 'N') 
+        {
             return;
         } else if (c == 's' || c == 'S') {
             printf("\nDigite nova mensagem (várias linhas).\n");
@@ -43,20 +44,26 @@ void editarPaginaInicial()
                     break;
                 }
 
+                //tamanho linha
                 size_t len = strlen(line);
-                if (total + len + (total > 0 ? 1 : 0) >= sizeof(machineInfo.greetings)) {
+
+                // Verifica se cabe espaço para mais um char
+                if (total + len + (total > 0 ? 1 : 0) >= sizeof(machineInfo.greetings)) 
+                { 
                     printf("\nLimite de 100 caracteres atingido. Leitura encerrada.\n");
                     fflush(stdin);
                     pause();
                     break;
                 }
 
-                if (total > 0) {
+                if (total > 0) //Pré-finaliza string
                     machineInfo.greetings[total++] = '\n';
-                }
-
+                
+                //Envia para a mensagem da máquina
                 memcpy(machineInfo.greetings + total, line, len);
                 total += len;
+
+                //Finaliza string
                 machineInfo.greetings[total] = '\0';
             }
 
@@ -64,9 +71,7 @@ void editarPaginaInicial()
             pause();
             atualizarArquivoAdmin();
             return;
-        } else {
-            printf("Opção inválida, por favor responda 's' ou 'n'.\n\n");
-        }
+        } 
     }
 };
 

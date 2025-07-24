@@ -8,3 +8,6 @@
 [21/07/2025] 12:34:23 Pepsi vendido por R$3.75 | Novo estoque: 3
 [21/07/2025] 12:34:43 Purezinha vendido por R$1.50 | Novo estoque: 7
 [21/07/2025] 12:45:50 Purezinha vendido por R$1.50 | Novo estoque: 6
+[23/07/2025] 15:44:19 Pureza vendido por R$1.50 | Novo estoque: 4
+[23/07/2025] 15:46:08 produto vendido por R$1.00 | Novo estoque: 0
+[23/07/2025] 15:46:20 Coca Cola  vendido por R$12.00 | Novo estoque: 12
