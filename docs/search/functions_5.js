@@ -1,12 +1,16 @@
 var searchData=
 [
-  ['limpargerenciadoradmin_0',['limparGerenciadorAdmin',['../admin_8h.html#a3fc07cb615697fb8062e5a56204a5ecc',1,'admin.h']]],
-  ['limpargerenciadormoedas_1',['limparGerenciadorMoedas',['../moedas_8h.html#ab8fc76cce574a9ea105aabd231b69edc',1,'moedas.h']]],
-  ['limpargerenciadorprodutos_2',['limparGerenciadorProdutos',['../produtos_8h.html#ab6b331ff32693182d36490a05abf0ab1',1,'produtos.h']]],
-  ['limpargerenciadorpropaganda_3',['limparGerenciadorPropaganda',['../propaganda_8h.html#a46ee1f1ff1b1074028fed62d806d795a',1,'propaganda.h']]],
-  ['limparlist_4',['limparList',['../list_8h.html#a70855243c9797b6e28a121a6b5d41d47',1,'list.h']]],
-  ['limparqueue_5',['limparQueue',['../queue_8h.html#a6d9285602ade3a73be9e9aaf72f36c59',1,'queue.h']]],
-  ['limparstack_6',['limparStack',['../stack_8h.html#a8f355a0973e650792adb168aee95daa2',1,'stack.h']]],
-  ['listarprodutos_7',['listarProdutos',['../produtos_8h.html#adbf4fdb8c5c275b1f95cf633868bfb03',1,'produtos.h']]],
-  ['listvazia_8',['listVazia',['../list_8h.html#a9c3c7679991858e370863a018ca27c27',1,'list.h']]]
+  ['imprimirlogs_0',['imprimirLogs',['../admin_8h.html#a4d4ca5c9d036295fe5db3d802d363745',1,'admin.h']]],
+  ['indexof_1',['indexOf',['../list_8h.html#a6b382b8dcca98e92c49cb6fd270b4f37',1,'list.h']]],
+  ['iniciargerenciadoradmin_2',['iniciarGerenciadorAdmin',['../admin_8h.html#a495a6e8cd6de2b29a73fc0803e37e3ec',1,'admin.h']]],
+  ['iniciargerenciadormoedas_3',['iniciarGerenciadorMoedas',['../moedas_8h.html#a648cd83bbda897da3191104ef790379a',1,'moedas.h']]],
+  ['iniciargerenciadorprodutos_4',['iniciarGerenciadorProdutos',['../produtos_8h.html#aa5faef70d06651f93903fa8695f8094d',1,'produtos.h']]],
+  ['iniciargerenciadorpropaganda_5',['iniciarGerenciadorPropaganda',['../propaganda_8h.html#ab17820848b0b93cb0a6bdc46c336d84a',1,'propaganda.h']]],
+  ['iniciarlist_6',['iniciarList',['../list_8h.html#a75881d7fa3b73bd961dc3a061b9b7761',1,'list.h']]],
+  ['iniciarmaquinaestados_7',['iniciarMaquinaEstados',['../maquinaestados_8h.html#aa22505659575967e838d25395b31fae3',1,'maquinaestados.h']]],
+  ['iniciarqueue_8',['iniciarQueue',['../queue_8h.html#a99442cb2d52aabeab8fe45169b0f31db',1,'queue.h']]],
+  ['iniciarstack_9',['iniciarStack',['../stack_8h.html#a4968fc9dc81ab8ef6bf73033cff13d04',1,'stack.h']]],
+  ['inserirmoeda_10',['inserirMoeda',['../moedas_8h.html#a477695585cfb60e1279a17ba5eaf1fa5',1,'moedas.h']]],
+  ['insertlist_11',['insertList',['../list_8h.html#a294b4ad114f4d17404b2ec44d64e97c1',1,'list.h']]],
+  ['iterarlista_12',['iterarLista',['../list_8h.html#ae4378d5f4040117c114b65b62f43e213',1,'list.h']]]
 ];

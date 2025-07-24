@@ -141,12 +141,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a681c4eabc002500249e51a0b91dd4ab0" id="r_a681c4eabc002500249e51a0b91dd4ab0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a681c4eabc002500249e51a0b91dd4ab0">carregarProdutos</a> ()</td></tr>
 <tr class="memdesc:a681c4eabc002500249e51a0b91dd4ab0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Carrega o arquivo de produtos para a lista de produtos na memória.  <br /></td></tr>
 <tr class="separator:a681c4eabc002500249e51a0b91dd4ab0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adbf4fdb8c5c275b1f95cf633868bfb03" id="r_adbf4fdb8c5c275b1f95cf633868bfb03"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbf4fdb8c5c275b1f95cf633868bfb03">listarProdutos</a> ()</td></tr>
-<tr class="memdesc:adbf4fdb8c5c275b1f95cf633868bfb03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os produtos.  <br /></td></tr>
-<tr class="separator:adbf4fdb8c5c275b1f95cf633868bfb03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fc891aadc06a758594b00c056ebdcfd" id="r_a8fc891aadc06a758594b00c056ebdcfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8fc891aadc06a758594b00c056ebdcfd">listarProdutos</a> (bool showAdminInfo)</td></tr>
+<tr class="memdesc:a8fc891aadc06a758594b00c056ebdcfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lista todos os produtos.  <br /></td></tr>
+<tr class="separator:a8fc891aadc06a758594b00c056ebdcfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a197cf1480a60b053049a9ebdde9deb30" id="r_a197cf1480a60b053049a9ebdde9deb30"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a197cf1480a60b053049a9ebdde9deb30">produtoValido</a> (int i)</td></tr>
 <tr class="memdesc:a197cf1480a60b053049a9ebdde9deb30"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um produto é valido.  <br /></td></tr>
 <tr class="separator:a197cf1480a60b053049a9ebdde9deb30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9beaffff7859ff709179ff7312230038" id="r_a9beaffff7859ff709179ff7312230038"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9beaffff7859ff709179ff7312230038">produtoExiste</a> (int i)</td></tr>
+<tr class="memdesc:a9beaffff7859ff709179ff7312230038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica se um produto existe.  <br /></td></tr>
+<tr class="separator:a9beaffff7859ff709179ff7312230038"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc5281292e7f311442762df4895dc343" id="r_abc5281292e7f311442762df4895dc343"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc5281292e7f311442762df4895dc343">selecionaProduto</a> (int i)</td></tr>
 <tr class="memdesc:abc5281292e7f311442762df4895dc343"><td class="mdescLeft">&#160;</td><td class="mdescRight">Seleciona um produto.  <br /></td></tr>
 <tr class="separator:abc5281292e7f311442762df4895dc343"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,12 +159,18 @@ Functions</h2></td></tr>
 <tr class="memitem:a603aef3585fbab4c479640288f6c546a" id="r_a603aef3585fbab4c479640288f6c546a"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a603aef3585fbab4c479640288f6c546a">criarArquivoProdutosPadrao</a> ()</td></tr>
 <tr class="memdesc:a603aef3585fbab4c479640288f6c546a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria o arquivo padrão.  <br /></td></tr>
 <tr class="separator:a603aef3585fbab4c479640288f6c546a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07322ab2db9bb2622ae26376c0993e43" id="r_a07322ab2db9bb2622ae26376c0993e43"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a07322ab2db9bb2622ae26376c0993e43">criarProduto</a> (char *name, float preço, int estoque, bool naVitrine, FILE *databse)</td></tr>
-<tr class="memdesc:a07322ab2db9bb2622ae26376c0993e43"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um produto.  <br /></td></tr>
-<tr class="separator:a07322ab2db9bb2622ae26376c0993e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc9708c7a0d282752ecd41e511e75e8" id="r_addc9708c7a0d282752ecd41e511e75e8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#addc9708c7a0d282752ecd41e511e75e8">criarProduto</a> (char *name, float preço, int estoque, bool naVitrine)</td></tr>
+<tr class="memdesc:addc9708c7a0d282752ecd41e511e75e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cria um produto.  <br /></td></tr>
+<tr class="separator:addc9708c7a0d282752ecd41e511e75e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a11ccddf40be41143b5abeb704db938e8" id="r_a11ccddf40be41143b5abeb704db938e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a11ccddf40be41143b5abeb704db938e8">venderProduto</a> ()</td></tr>
 <tr class="memdesc:a11ccddf40be41143b5abeb704db938e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vende o produto selecionado, diminui do estoque e cria log de venda.  <br /></td></tr>
 <tr class="separator:a11ccddf40be41143b5abeb704db938e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaed20aae23d23d3cf1025863987a7d61" id="r_aaed20aae23d23d3cf1025863987a7d61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaed20aae23d23d3cf1025863987a7d61">atualizarProduto</a> (int i)</td></tr>
+<tr class="memdesc:aaed20aae23d23d3cf1025863987a7d61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualizar info do produto e salva no arquivo.  <br /></td></tr>
+<tr class="separator:aaed20aae23d23d3cf1025863987a7d61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b8fa4176e7120e30e2597c4a9f21045" id="r_a7b8fa4176e7120e30e2597c4a9f21045"><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7b8fa4176e7120e30e2597c4a9f21045">getProductOnList</a> (int i)</td></tr>
+<tr class="memdesc:a7b8fa4176e7120e30e2597c4a9f21045"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pega o ptr para um produto.  <br /></td></tr>
+<tr class="separator:a7b8fa4176e7120e30e2597c4a9f21045"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Gerencia os produtos, manipula em arquivo binário e cria lista de produtos na memória. </p>
@@ -187,6 +196,31 @@ Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="aaed20aae23d23d3cf1025863987a7d61" name="aaed20aae23d23d3cf1025863987a7d61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaed20aae23d23d3cf1025863987a7d61">&#9670;&#160;</a></span>atualizarProduto()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void atualizarProduto </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualizar info do produto e salva no arquivo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Idx produto na lista. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a681c4eabc002500249e51a0b91dd4ab0" name="a681c4eabc002500249e51a0b91dd4ab0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a681c4eabc002500249e51a0b91dd4ab0">&#9670;&#160;</a></span>carregarProdutos()</h2>
 
@@ -226,8 +260,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a07322ab2db9bb2622ae26376c0993e43" name="a07322ab2db9bb2622ae26376c0993e43"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07322ab2db9bb2622ae26376c0993e43">&#9670;&#160;</a></span>criarProduto()</h2>
+<a id="addc9708c7a0d282752ecd41e511e75e8" name="addc9708c7a0d282752ecd41e511e75e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#addc9708c7a0d282752ecd41e511e75e8">&#9670;&#160;</a></span>criarProduto()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,12 +284,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>naVitrine</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">FILE *</td>          <td class="paramname"><span class="paramname"><em>databse</em></span>&#160;)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>naVitrine</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -267,11 +296,36 @@ Functions</h2></td></tr>
     <tr><td class="paramname">preço</td><td>Preço do produto </td></tr>
     <tr><td class="paramname">estoque</td><td>Valor em estoque </td></tr>
     <tr><td class="paramname">ativo</td><td>Está ativo para listagem </td></tr>
-    <tr><td class="paramname">database</td><td>Ponteiro para o arquivo de produtos </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Ponteiro para estrutura do produto </dd></dl>
+
+</div>
+</div>
+<a id="a7b8fa4176e7120e30e2597c4a9f21045" name="a7b8fa4176e7120e30e2597c4a9f21045"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b8fa4176e7120e30e2597c4a9f21045">&#9670;&#160;</a></span>getProductOnList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_p_r_o_d_u_t_o___h_e_a_d_e_r.html">PRODUTO_HEADER</a> * getProductOnList </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pega o ptr para um produto. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>Idx do produto na lista. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Ptr </dd></dl>
 
 </div>
 </div>
@@ -313,8 +367,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="adbf4fdb8c5c275b1f95cf633868bfb03" name="adbf4fdb8c5c275b1f95cf633868bfb03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbf4fdb8c5c275b1f95cf633868bfb03">&#9670;&#160;</a></span>listarProdutos()</h2>
+<a id="a8fc891aadc06a758594b00c056ebdcfd" name="a8fc891aadc06a758594b00c056ebdcfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fc891aadc06a758594b00c056ebdcfd">&#9670;&#160;</a></span>listarProdutos()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,13 +376,45 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void listarProdutos </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">bool</td>          <td class="paramname"><span class="paramname"><em>showAdminInfo</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Lista todos os produtos. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">showAdminInfo</td><td>Exibe informações extras do produto junto da lista. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9beaffff7859ff709179ff7312230038" name="a9beaffff7859ff709179ff7312230038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9beaffff7859ff709179ff7312230038">&#9670;&#160;</a></span>produtoExiste()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool produtoExiste </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>i</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Verifica se um produto existe. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">i</td><td>numero equivalente na lista </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true se existe </dd></dl>
 
 </div>
 </div>
